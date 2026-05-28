@@ -4,4 +4,4 @@ def test_add_pass():
 
 # 失败用例（用来演示自动报错）
 def test_add_fail():
-    assert 1 + 1 == 3
+    assert 1 + 1 == 2

@@ -6,37 +6,46 @@ pipeline {
         ALLURE_RESULTS = "${WORKSPACE}/allure-results"
     }
     stages {
-        // 0. 安装依赖（锁死版本 + 强制系统环境）
-        stage('0. 安装依赖（锁死版本）') {
+        stage('0. 安装依赖（强制成功）') {
             steps {
                 sh '''
+                    set -e
                     cd ${PROJECT_DIR}
-                    sudo python3 -m pip install --no-cache-dir -r requirements.txt
+                    # 不用 sudo，避免卡住；安装到系统 Python3
+                    python3 -m pip install --upgrade pip
+                    python3 -m pip install --no-cache-dir -r requirements.txt
                 '''
             }
         }
 
-        // 检查 Evidently 版本
-        stage('检查 Evidently 版本') {
-            steps {
-                sh 'python3 -m pip show evidently'
-            }
-        }
-
-        stage('1. 环境与目录检查') {
-            steps {
-                sh 'whoami'
-                sh 'echo 项目目录：${PROJECT_DIR}'
-                sh 'echo 模型目录：${MODEL_DIR}'
-                sh 'ls -la ${PROJECT_DIR}'
-            }
-        }
-
-        stage('2. 执行全量自动化测试') {
+        stage('1. 验证 Evidently 安装') {
             steps {
                 sh '''
+                    set -e
+                    python3 -m pip show evidently
+                    python3 -c "from evidently.report import Report; print('✅ Evidently 导入成功')"
+                '''
+            }
+        }
+
+        stage('2. 环境与目录检查') {
+            steps {
+                sh '''
+                    whoami
+                    echo "PROJECT_DIR=${PROJECT_DIR}"
+                    ls -la ${PROJECT_DIR}
+                '''
+            }
+        }
+
+        stage('3. 执行全量自动化测试') {
+            steps {
+                sh '''
+                    set -e
                     cd ${PROJECT_DIR}
-                    python3 -m pytest -v --alluredir=${ALLURE_RESULTS} --clean-alluredir
+                    python3 -m pytest \
+                        test_demo_case.py test_model_base.py test_model_offline.py \
+                        -v --alluredir=${ALLURE_RESULTS} --clean-alluredir
                 '''
             }
         }

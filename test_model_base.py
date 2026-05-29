@@ -2,13 +2,9 @@ import pytest
 import mlflow
 import pandas as pd
 from evidently import Report
-from evidently.metrics import DatasetDriftMetric
-import evidently
-print("本地evidently版本:", evidently.__version__)
+# ✅ 正确导入（0.7.6 官方可用）
+from evidently.metrics import DatasetSummaryMetric
 
-# --------------------------
-# 数据加载
-# --------------------------
 def load_model_sample_data(model_info):
     data = [
         {"input_text": "今天天气不错", "embedding_norm": 0.82},
@@ -17,9 +13,6 @@ def load_model_sample_data(model_info):
     ]
     return pd.DataFrame(data)
 
-# --------------------------
-# 测试用例
-# --------------------------
 def test_model_mlflow_logging(model_info):
     MODEL_NAME = model_info["name"]
     MODEL_PATH = model_info["path"]
@@ -40,7 +33,8 @@ def test_model_data_quality_and_drift(model_info):
     MODEL_NAME = model_info["name"]
     df = load_model_sample_data(model_info)
 
-    report = Report(metrics=[DatasetDriftMetric()])
+    # ✅ 换成 0.7.6 支持的指标
+    report = Report(metrics=[DatasetSummaryMetric()])
     report.run(current_data=df)
     
     html_path = f"/tmp/{MODEL_NAME}_drift.html"

@@ -2,6 +2,7 @@ import pytest
 import mlflow
 import pandas as pd
 from evidently import Report
+from evidently.metrics import ColumnDistributionMetric
 
 # --------------------------
 # 数据加载（由 fixture 传入 model_info）
@@ -38,26 +39,32 @@ def test_model_mlflow_logging(model_info):
 
 
 def test_model_data_quality(model_info):
-    """通用：Evidently 数据质量检查（无额外导入，仅用 Report）"""
+    """通用：Evidently 数据质量检查（兼容当前版本）"""
     MODEL_NAME = model_info["name"]
     df = load_model_sample_data(model_info)
 
-    # 用 Report 生成报告，不依赖任何额外指标
-    report = Report()
+    # 必须传入 metrics，这里用最简单的 ColumnDistributionMetric
+    report = Report(metrics=[
+        ColumnDistributionMetric(column_name="embedding_norm")
+    ])
     report.run(current_data=df)
 
     html_path = f"/tmp/{MODEL_NAME}_data_quality.html"
     report.save_html(html_path)
 
-    # 直接断言空值，效果和原来完全一样
+    # 空值断言（和原来一样）
     assert df["input_text"].isnull().sum() == 0, "input_text 存在空值"
     assert df["embedding_norm"].isnull().sum() == 0, "embedding_norm 存在空值"
 
 
 def test_model_basic_stats(model_info):
-    """通用：基础统计/分布检查"""
+    """通用：基础统计/分布检查（兼容当前版本）"""
     df = load_model_sample_data(model_info)
-    report = Report()
+
+    # 必须传入 metrics，这里复用 ColumnDistributionMetric
+    report = Report(metrics=[
+        ColumnDistributionMetric(column_name="embedding_norm")
+    ])
     report.run(current_data=df)
 
     assert df.isnull().sum().sum() == 0, "数据中存在空值"

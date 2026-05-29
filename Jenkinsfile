@@ -1,64 +1,44 @@
 pipeline {
     agent any
     environment {
-        PROJECT_DIR = "/home/ubuntu/Desktop/auto-ci-demo"
-        MODEL_DIR   = "/home/ubuntu/Desktop/ai-models"
+        PROJECT_DIR = "${WORKSPACE}"
         ALLURE_RESULTS = "${WORKSPACE}/allure-results"
     }
     stages {
-        stage('0. 安装依赖（强制成功）') {
+        stage('0. 修复环境 & 安装依赖') {
             steps {
                 sh '''
                     set -e
                     cd ${PROJECT_DIR}
-                    # 不用 sudo，避免卡住；安装到系统 Python3
-                    python3 -m pip install --upgrade pip
+                    
+                    # 🔥 关键：强制固定 pip 版本，避开 Ubuntu 错误
+                    python3 -m pip install pip==24.0 --user --ignore-installed
+                    
+                    # 正常安装依赖
                     python3 -m pip install --no-cache-dir -r requirements.txt
                 '''
             }
         }
 
-        stage('1. 验证 Evidently 安装') {
+        stage('1. 检查环境') {
             steps {
-                sh '''
-                    set -e
-                    python3 -m pip show evidently
-                    python3 -c "from evidently.report import Report; print('✅ Evidently 导入成功')"
-                '''
+                sh 'whoami'
+                sh 'ls -la ${PROJECT_DIR}'
             }
         }
 
-        stage('2. 环境与目录检查') {
+        stage('2. 运行测试') {
             steps {
                 sh '''
-                    whoami
-                    echo "PROJECT_DIR=${PROJECT_DIR}"
-                    ls -la ${PROJECT_DIR}
-                '''
-            }
-        }
-
-        stage('3. 执行全量自动化测试') {
-            steps {
-                sh '''
-                    set -e
                     cd ${PROJECT_DIR}
-                    python3 -m pytest \
-                        test_demo_case.py test_model_base.py test_model_offline.py \
-                        -v --alluredir=${ALLURE_RESULTS} --clean-alluredir
+                    python3 -m pytest -v --alluredir=${ALLURE_RESULTS}
                 '''
             }
         }
     }
     post {
         always {
-            allure([
-                includeProperties: false,
-                jdk: '',
-                properties: [],
-                reportBuildPolicy: 'ALWAYS',
-                results: [[path: "${ALLURE_RESULTS}"]]
-            ])
+            allure(results: [[path: "${ALLURE_RESULTS}"]])
         }
     }
 }

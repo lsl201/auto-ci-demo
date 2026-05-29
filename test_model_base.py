@@ -1,6 +1,8 @@
 import pytest
 import mlflow
 import pandas as pd
+from evidently import Report
+from evidently.metrics import DatasetSummaryMetric, ColumnMissingValuesMetric, DatasetDriftMetric
 
 # --------------------------
 # 数据加载（由 fixture 传入 model_info）
@@ -37,18 +39,51 @@ def test_model_mlflow_logging(model_info):
 
 
 def test_model_data_quality(model_info):
-    """通用：数据质量检查（完全用 pandas，不依赖 evidently）"""
+    """通用：Evidently 数据质量检查 + 空值检测"""
+    MODEL_NAME = model_info["name"]
     df = load_model_sample_data(model_info)
 
-    # 直接用 pandas 做空值检查
+    # 数据质量报告（0.7.6 稳定写法）
+    report = Report(metrics=[
+        DatasetSummaryMetric(),
+        ColumnMissingValuesMetric(column_name="input_text"),
+        ColumnMissingValuesMetric(column_name="embedding_norm"),
+    ])
+    report.run(current_data=df)
+
+    # 保存 HTML 报告
+    html_path = f"/tmp/{MODEL_NAME}_data_quality.html"
+    report.save_html(html_path)
+    mlflow.log_artifact(html_path)  # 报告存入 MLflow
+
+    # 数据质量断言
     assert df["input_text"].isnull().sum() == 0, "input_text 存在空值"
     assert df["embedding_norm"].isnull().sum() == 0, "embedding_norm 存在空值"
     assert len(df) > 0, "数据集为空"
 
 
-def test_model_basic_stats(model_info):
-    """通用：基础统计/分布检查（完全用 pandas，不依赖 evidently）"""
+def test_model_drift_detection(model_info):
+    """通用：Evidently 数据漂移检测（核心功能）"""
+    MODEL_NAME = model_info["name"]
     df = load_model_sample_data(model_info)
 
+    # 漂移检测报告（0.7.6 官方标准写法）
+    report = Report(metrics=[
+        DatasetDriftMetric(),
+    ])
+    report.run(current_data=df)
+
+    # 保存漂移报告
+    html_path = f"/tmp/{MODEL_NAME}_drift_report.html"
+    report.save_html(html_path)
+    mlflow.log_artifact(html_path)
+
+    # 漂移检测通过标准：无明显漂移
+    assert report.as_dict()["metrics"][0]["result"]["drift_detected"] is False, "检测到数据分布漂移！"
+
+
+def test_model_basic_stats(model_info):
+    """通用：基础统计检查"""
+    df = load_model_sample_data(model_info)
     assert df.isnull().sum().sum() == 0, "数据中存在空值"
     assert df["embedding_norm"].min() >= 0, "embedding_norm 存在负值"

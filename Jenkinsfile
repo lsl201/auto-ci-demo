@@ -23,10 +23,7 @@ pipeline {
 
         stage('2. 运行测试') {
             steps {
-                sh '''
-                cd my_cases/
-                /usr/bin/python3 -m pytest -v --alluredir=../allure-results
-                '''
+                sh '/usr/bin/python3 -m pytest -v --alluredir=${ALLURE_RESULTS}'
             }
         }
     }

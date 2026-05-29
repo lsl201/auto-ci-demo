@@ -2,6 +2,7 @@ import pytest
 import mlflow
 import pandas as pd
 from evidently import Report
+# 新版 0.7.6 路径
 from evidently.metrics import DatasetDriftMetric
 
 # --------------------------
@@ -38,7 +39,6 @@ def test_model_data_quality_and_drift(model_info):
     MODEL_NAME = model_info["name"]
     df = load_model_sample_data(model_info)
 
-    # 适配 0.7.6 的稳定写法
     report = Report(metrics=[DatasetDriftMetric()])
     report.run(current_data=df)
     
@@ -46,7 +46,6 @@ def test_model_data_quality_and_drift(model_info):
     report.save_html(html_path)
     mlflow.log_artifact(html_path)
 
-    # 数据质量断言
     assert df["input_text"].isnull().sum() == 0, "input_text 存在空值"
     assert df["embedding_norm"].isnull().sum() == 0, "embedding_norm 存在空值"
 

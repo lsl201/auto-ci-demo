@@ -2,8 +2,8 @@ import pytest
 import mlflow
 import pandas as pd
 from evidently import Report
-# ✅ 正确导入（0.7.6 官方可用）
-from evidently.metrics import DatasetSummaryMetric
+# 👇 0.7.6 唯一正确的指标导入路径
+from evidently.metrics import ColumnDriftMetric, DatasetMissingValuesMetric
 
 def load_model_sample_data(model_info):
     data = [
@@ -33,9 +33,12 @@ def test_model_data_quality_and_drift(model_info):
     MODEL_NAME = model_info["name"]
     df = load_model_sample_data(model_info)
 
-    # ✅ 换成 0.7.6 支持的指标
-    report = Report(metrics=[DatasetSummaryMetric()])
-    report.run(current_data=df)
+    # 👇 0.7.6 支持的指标，直接用 Report 生成
+    report = Report(metrics=[
+        DatasetMissingValuesMetric(),  # 检查缺失值（替代数据质量）
+        ColumnDriftMetric(column_name="embedding_norm")  # 检查列漂移
+    ])
+    report.run(reference_data=df, current_data=df)  # 0.7.6 也支持 run 方法
     
     html_path = f"/tmp/{MODEL_NAME}_drift.html"
     report.save_html(html_path)

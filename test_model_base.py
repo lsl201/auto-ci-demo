@@ -2,8 +2,9 @@ import pytest
 import mlflow
 import pandas as pd
 from evidently import Report
-# 新版 0.7.6 路径
 from evidently.metrics import DatasetDriftMetric
+import evidently
+print("本地evidently版本:", evidently.__version__)
 
 # --------------------------
 # 数据加载

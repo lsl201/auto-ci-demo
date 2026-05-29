@@ -11,6 +11,7 @@ pipeline {
                     set -e
                     cd ${PROJECT_DIR}
                     /usr/bin/python3 -m pip install --no-cache-dir -r requirements.txt --user
+                    /usr/bin/python3 -m pip install -U evidently>=0.14.0 --user
                 '''
             }
         }

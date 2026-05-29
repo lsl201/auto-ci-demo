@@ -16,7 +16,7 @@ pipeline {
                     /usr/bin/python3 -m pip uninstall -y evidently
                     
                     # 强制安装新版！！！关键在这里！！
-                    /usr/bin/python3 -m pip install -U "evidently>=0.14.0" --user --no-cache-dir
+                    /usr/bin/python3 -m pip install -U evidently==0.7.21 --user --no-cache-dir
                 '''
             }
         }

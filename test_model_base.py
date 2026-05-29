@@ -2,8 +2,10 @@ import pytest
 import mlflow
 import pandas as pd
 
+# ✅ 0.5.0 正确导入
 from evidently.report import Report
-from evidently.metric_preset import DataDriftPreset, TargetDriftPreset, RegressionPreset
+from evidently.metric_preset import DataQualityPreset, DataDriftPreset
+
 
 def load_model_sample_data(model_info):
     data = [
@@ -12,6 +14,7 @@ def load_model_sample_data(model_info):
         {"input_text": "人工智能很好玩", "embedding_norm": 0.91},
     ]
     return pd.DataFrame(data)
+
 
 def test_model_mlflow_logging(model_info):
     MODEL_NAME = model_info["name"]
@@ -29,22 +32,29 @@ def test_model_mlflow_logging(model_info):
         df.to_csv(csv_path, index=False)
         mlflow.log_artifact(csv_path)
 
+
 def test_model_data_quality_and_drift(model_info):
     MODEL_NAME = model_info["name"]
     df = load_model_sample_data(model_info)
 
-    # ================= 旧版 API 用法 =================
-    dashboard = Dashboard(tabs=[DataQualityTab()])
-    dashboard.calculate(df, df)  # 参考数据=当前数据，检查数据质量
-    
+    report = Report(metrics=[
+        DataQualityPreset(),
+        DataDriftPreset()
+    ])
+
+    # ===================== 【唯一修改】 =====================
+    # 0.5.0 不支持关键字参数，必须传位置参数
+    # =========================================================
+    report.run(df, df)
+
     html_path = f"/tmp/{MODEL_NAME}_drift.html"
-    dashboard.save(html_path)  # 旧版用 save()，不是 save_html
-    # =================================================
+    report.save_html(html_path)
 
     mlflow.log_artifact(html_path)
 
     assert df["input_text"].isnull().sum() == 0, "input_text 存在空值"
     assert df["embedding_norm"].isnull().sum() == 0, "embedding_norm 存在空值"
+
 
 def test_model_basic_stats(model_info):
     df = load_model_sample_data(model_info)

@@ -6,22 +6,23 @@ pipeline {
         ALLURE_RESULTS = "${WORKSPACE}/allure-results"
     }
     stages {
-        // 0. 安装依赖（锁死版本，强制使用 python3 -m pip）
+        // 0. 安装依赖（锁死版本 + 强制系统环境）
         stage('0. 安装依赖（锁死版本）') {
             steps {
                 sh '''
                     cd ${PROJECT_DIR}
-                    # 关键：用 python3 -m pip 安装，确保和你终端的 Python 环境一致
-                    python3 -m pip install --no-cache-dir -r requirements.txt
+                    sudo python3 -m pip install --no-cache-dir -r requirements.txt
                 '''
             }
         }
-        // 检查 Evidently 版本（同步使用 python3 -m pip）
+
+        // 检查 Evidently 版本
         stage('检查 Evidently 版本') {
             steps {
                 sh 'python3 -m pip show evidently'
             }
         }
+
         stage('1. 环境与目录检查') {
             steps {
                 sh 'whoami'
@@ -30,11 +31,12 @@ pipeline {
                 sh 'ls -la ${PROJECT_DIR}'
             }
         }
+
         stage('2. 执行全量自动化测试') {
             steps {
                 sh '''
                     cd ${PROJECT_DIR}
-                    pytest -v --alluredir=${ALLURE_RESULTS} --clean-alluredir
+                    python3 -m pytest -v --alluredir=${ALLURE_RESULTS} --clean-alluredir
                 '''
             }
         }

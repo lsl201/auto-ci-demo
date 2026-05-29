@@ -1,7 +1,7 @@
 import pytest
 import mlflow
 import pandas as pd
-from evidently.report import Report
+from evidently import Report
 from evidently.metrics import DatasetDriftMetric
 
 # --------------------------

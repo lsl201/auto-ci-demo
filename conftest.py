@@ -17,10 +17,10 @@ MODEL_LIST = [
     {
         "name": "distilbert_zh",
         "path": "/home/ubuntu/Desktop/ai-models/distilbert-base-chinese",
-        "tokenizer_cls": DistilBertTokenizer,
-        "model_cls": DistilBertModel,
+        "tokenizer_cls": BertTokenizer,
+        "model_cls": BertModel,
         "dim": 768,
-        "ignore_mismatch": True
+        "ignore_mismatch": False
     }
 ]
 

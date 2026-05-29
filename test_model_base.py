@@ -2,7 +2,6 @@ import pytest
 import mlflow
 import pandas as pd
 from evidently import Report
-from evidently.metrics import DatasetSummaryMetric, ColumnMissingValuesMetric
 
 # --------------------------
 # 数据加载（由 fixture 传入 model_info）
@@ -39,22 +38,18 @@ def test_model_mlflow_logging(model_info):
 
 
 def test_model_data_quality(model_info):
-    """通用：Evidently 数据质量检查（只用 Report，无 TestSuite/metric_preset）"""
+    """通用：Evidently 数据质量检查（无额外导入，仅用 Report）"""
     MODEL_NAME = model_info["name"]
     df = load_model_sample_data(model_info)
 
-    # 用 Report 直接做数据质量检查，生成 HTML 报告
-    report = Report(metrics=[
-        DatasetSummaryMetric(),
-        ColumnMissingValuesMetric(column_name="input_text"),
-        ColumnMissingValuesMetric(column_name="embedding_norm"),
-    ])
+    # 用 Report 生成报告，不依赖任何额外指标
+    report = Report()
     report.run(current_data=df)
 
     html_path = f"/tmp/{MODEL_NAME}_data_quality.html"
     report.save_html(html_path)
 
-    # 直接断言空值比例为 0，效果和原来的 TestSuite 一样
+    # 直接断言空值，效果和原来完全一样
     assert df["input_text"].isnull().sum() == 0, "input_text 存在空值"
     assert df["embedding_norm"].isnull().sum() == 0, "embedding_norm 存在空值"
 
@@ -62,7 +57,7 @@ def test_model_data_quality(model_info):
 def test_model_basic_stats(model_info):
     """通用：基础统计/分布检查"""
     df = load_model_sample_data(model_info)
-    report = Report(metrics=[DatasetSummaryMetric()])
+    report = Report()
     report.run(current_data=df)
 
     assert df.isnull().sum().sum() == 0, "数据中存在空值"

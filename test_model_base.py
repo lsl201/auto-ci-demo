@@ -2,9 +2,8 @@ import pytest
 import mlflow
 import pandas as pd
 
-# 旧版 evidently 0.7.21 正确导入
-from evidently.dashboard import Dashboard
-from evidently.dashboard.tabs import DataQualityTab
+from evidently.report import Report
+from evidently.metric_preset import DataDriftPreset, TargetDriftPreset, RegressionPreset
 
 def load_model_sample_data(model_info):
     data = [

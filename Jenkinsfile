@@ -6,20 +6,20 @@ pipeline {
         ALLURE_RESULTS = "${WORKSPACE}/allure-results"
     }
     stages {
-        // 新增：0. 安装依赖（锁死版本）
+        // 0. 安装依赖（锁死版本，强制使用 python3 -m pip）
         stage('0. 安装依赖（锁死版本）') {
             steps {
                 sh '''
                     cd ${PROJECT_DIR}
-                    # 严格按 requirements.txt 安装，不升级、不兼容
-                    pip install --no-cache-dir -r requirements.txt
+                    # 关键：用 python3 -m pip 安装，确保和你终端的 Python 环境一致
+                    python3 -m pip install --no-cache-dir -r requirements.txt
                 '''
             }
         }
-        // 新增：检查 Evidently 版本
+        // 检查 Evidently 版本（同步使用 python3 -m pip）
         stage('检查 Evidently 版本') {
             steps {
-                sh 'pip show evidently'
+                sh 'python3 -m pip show evidently'
             }
         }
         stage('1. 环境与目录检查') {

@@ -11,7 +11,8 @@ pipeline {
                     set -e
                     cd ${PROJECT_DIR}
                     /usr/bin/python3 -m pip install --no-cache-dir -r requirements.txt --user
-                    /usr/bin/python3 -m pip install -U evidently>=0.14.0 --user
+                    /usr/bin/python3 -m pip uninstall -y evidently       # 强制删旧版
+                    /usr/bin/python3 -m pip install -U evidently>=0.14.0 --user --no-cache-dir  # 强制装新版
                 '''
             }
         }

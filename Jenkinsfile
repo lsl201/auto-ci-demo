@@ -3,7 +3,6 @@ pipeline {
     environment {
         PROJECT_DIR = "${WORKSPACE}"
         ALLURE_RESULTS = "${WORKSPACE}/allure-results"
-        PYTHONPATH = "/home/ubuntu/.local/lib/python3.10/site-packages"
     }
     stages {
         stage('0. 安装依赖') {
@@ -12,11 +11,12 @@ pipeline {
                     set -e
                     cd ${PROJECT_DIR}
                     /usr/bin/python3 -m pip install --no-cache-dir -r requirements.txt --user
-                    /usr/bin/python3 -m pip uninstall -y evidently
-                    /usr/bin/python3 -m pip install -U evidently>=0.14.0 --user --no-cache-dir
                     
-                    # 关键：刷新包缓存
-                    /usr/bin/python3 -c "import site; site.main()"
+                    # 强制彻底删除旧版
+                    /usr/bin/python3 -m pip uninstall -y evidently
+                    
+                    # 强制安装新版！！！关键在这里！！
+                    /usr/bin/python3 -m pip install -U "evidently>=0.14.0" --user --no-cache-dir
                 '''
             }
         }
@@ -24,7 +24,6 @@ pipeline {
         stage('1. 检查环境') {
             steps {
                 sh '''
-                    whoami
                     /usr/bin/python3 -m pip show evidently
                 '''
             }

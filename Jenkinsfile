@@ -9,7 +9,7 @@ pipeline {
                 sh '''
                     set -e
                     /usr/bin/python3 -m pip install --upgrade pip
-                    /usr/bin/python3 -m pip install --no-cache-dir --ignore-installed -r requirements.txt
+                    /usr/bin/python3 -m pip install --no-cache-dir -r requirements.txt
                 '''
             }
         }

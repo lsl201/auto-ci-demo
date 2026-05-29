@@ -1,8 +1,10 @@
 import pytest
 import mlflow
 import pandas as pd
-from evidently.report import Report
-from evidently.metric_preset import DataQualityPreset
+
+# 旧版 evidently 0.7.21 正确导入
+from evidently.dashboard import Dashboard
+from evidently.dashboard.tabs import DataQualityTab
 
 def load_model_sample_data(model_info):
     data = [
@@ -32,11 +34,14 @@ def test_model_data_quality_and_drift(model_info):
     MODEL_NAME = model_info["name"]
     df = load_model_sample_data(model_info)
 
-    # ✅ 新版 evidently 正确用法（你现在已经升级成功了！）
-    report = Report(metrics=[DataQualityPreset()])
-    report.run(current_data=df, reference_data=df)
+    # ================= 旧版 API 用法 =================
+    dashboard = Dashboard(tabs=[DataQualityTab()])
+    dashboard.calculate(df, df)  # 参考数据=当前数据，检查数据质量
+    
     html_path = f"/tmp/{MODEL_NAME}_drift.html"
-    report.save_html(html_path)
+    dashboard.save(html_path)  # 旧版用 save()，不是 save_html
+    # =================================================
+
     mlflow.log_artifact(html_path)
 
     assert df["input_text"].isnull().sum() == 0, "input_text 存在空值"

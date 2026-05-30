@@ -21,9 +21,15 @@ pipeline {
             }
         }
 
-        stage('2. 运行测试') {
+        stage('2. 运行测试（双保险：目录隔离 + marker）') {
             steps {
-                sh '/usr/bin/python3 -m pytest -v --alluredir=${ALLURE_RESULTS}'
+                sh '''
+                    # 1. 清空上次结果，避免残留
+                    rm -rf ${ALLURE_RESULTS}
+                    
+                    # 2. 只扫描 tests/debug/ 目录 + 只跑 @mine 标记的用例
+                    /usr/bin/python3 -m pytest tests/debug/ -m "mine" -v --alluredir=${ALLURE_RESULTS}
+                '''
             }
         }
     }

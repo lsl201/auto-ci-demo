@@ -1,0 +1,16 @@
+creation_timestamp: 1780145245929
+current_stage: None
+deployment_job_state: null
+description: ''
+last_updated_timestamp: 1780145245929
+model_id: m-abe61bfb16204b14bb5a17478640911a
+name: text-classifier
+run_id: 3ad48b995b364ff5aaf07a191816bc39
+run_link: ''
+source: models:/m-abe61bfb16204b14bb5a17478640911a
+status: READY
+status_message: null
+storage_location: /home/ubuntu/Desktop/auto-ci-demo/mlruns/236145375732836753/models/m-abe61bfb16204b14bb5a17478640911a/artifacts
+user_id: null
+version: 12
+workspace: default

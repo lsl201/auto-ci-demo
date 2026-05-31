@@ -1,0 +1,1 @@
+项目模型根路径： /home/ubuntu/Desktop/ai-models

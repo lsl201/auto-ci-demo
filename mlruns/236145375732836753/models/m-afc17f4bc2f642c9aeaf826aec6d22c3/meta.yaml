@@ -1,0 +1,10 @@
+artifact_location: /home/ubuntu/Desktop/auto-ci-demo/mlruns/236145375732836753/models/m-afc17f4bc2f642c9aeaf826aec6d22c3/artifacts
+creation_timestamp: 1780127493220
+experiment_id: '236145375732836753'
+last_updated_timestamp: 1780127496427
+model_id: m-afc17f4bc2f642c9aeaf826aec6d22c3
+model_type: ''
+name: text_classifier_model
+source_run_id: 5a318adbb4f5468b8e714525df8a0248
+status: 2
+status_message: null

@@ -4,3 +4,6 @@ pandas==2.3.3
 mlflow==3.12.0
 evidently==0.5.0
 numpy==1.26.4
+scikit-learn==1.7.2
+sentence-transformers==5.5.1
+huggingface-hub==1.16.4

@@ -1,0 +1,23 @@
+artifact_path: /home/ubuntu/Desktop/auto-ci-demo/mlruns/236145375732836753/models/m-2ea9326262464642bc1c9332de20f7e6/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+    skops_trusted_types: null
+mlflow_version: 3.12.0
+model_id: m-2ea9326262464642bc1c9332de20f7e6
+model_size_bytes: 3795
+model_uuid: m-2ea9326262464642bc1c9332de20f7e6
+prompts: null
+run_id: 4620f331c6fe4ff6a7e1c82d513ef4fe
+utc_time_created: '2026-05-30 07:31:29.753367'

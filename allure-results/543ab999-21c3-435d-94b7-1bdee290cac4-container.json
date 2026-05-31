@@ -1,0 +1,1 @@
+{"uuid": "de48c8a9-e095-47ff-9667-91c4ec03c7dc", "children": ["d498c413-28fb-4020-937e-8c314a4ae684"], "befores": [{"name": "distilbert_model", "status": "passed", "start": 1780216407826, "stop": 1780216409482}], "start": 1780216407826, "stop": 1780216409483}

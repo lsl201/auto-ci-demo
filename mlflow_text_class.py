@@ -1,99 +1,97 @@
-# mlflow_text_class.py（离线版：使用你本地 all-MiniLM-L6-v2 模型）
+# mlflow_text_class.py（优化版：增加数据量，提高准确率）
 import mlflow
 import mlflow.sklearn
 import numpy as np
-import os
-import shutil
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sentence_transformers import SentenceTransformer
-# ---------------- 自动清理旧实验：只保留当前实验，删除其他 ----------------
-from mlflow.tracking import MlflowClient
 
-# 你要保留的实验名称（和后面 set_experiment 一致）
-KEEP_EXP_NAME = "文本分类实战（离线BERT版）"
-
-client = MlflowClient()
-
-# 列出所有非 deleted 的实验
-all_exps = mlflow.search_experiments(view_type=mlflow.entities.ViewType.ACTIVE_ONLY)
-
-for exp in all_exps:
-    exp_id = exp.experiment_id
-    exp_name = exp.name
-    # 跳过要保留的实验
-    if exp_name == KEEP_EXP_NAME:
-        print(f"✅ 保留实验：{exp_name} (ID:{exp_id})")
-        continue
-    # 删除其他所有实验
-    print(f"🗑️  删除旧实验：{exp_name} (ID:{exp_id})")
-    client.delete_experiment(exp_id)
-# ---------------------------------------------------------------------------
-
-mlruns_dir = "mlruns"
-if os.path.exists(mlruns_dir):
-    for exp_id in os.listdir(mlruns_dir):
-        # 只删数字ID文件夹，跳过你要保留的那个ID
-        if exp_id.isdigit() and exp_id != "2":  # 把"2"换成你保留实验的ID
-            exp_path = os.path.join(mlruns_dir, exp_id)
-            shutil.rmtree(exp_path)
-            print(f"🧹 清理磁盘旧目录：{exp_path}")
-
-# ===================== 你的离线模型真实路径 =====================
+# ===================== 离线模型路径 =====================
 MODEL_PATH = "/home/ubuntu/Desktop/ai-models/all-MiniLM-L6-v2"
-# ==============================================================
+# ========================================================
 
-# 1. 模拟文本数据
+# 1. 扩充后的文本数据（太空 vs 宗教，共40条）
 texts = [
+    # 太空类 (标签1)
     "The spacecraft launched successfully to Mars orbit.",
     "NASA is planning a new mission to study black holes.",
     "The new telescope captured amazing images of distant galaxies.",
-    "Many people believe in God and practice their religion.",
-    "The debate about the existence of God has been ongoing for centuries.",
-    "Different religions have different views on the afterlife.",
     "Astronauts trained for years before their space mission.",
     "Scientists are looking for signs of life on other planets.",
+    "The space station orbits Earth every 90 minutes.",
+    "The rocket engine ignited with a powerful roar.",
+    "Deep space exploration requires advanced technology.",
+    "The moon landing was a historic achievement.",
+    "Black holes have extremely strong gravitational pull.",
+    "Stars are born in vast clouds of gas and dust.",
+    "The James Webb telescope sees the earliest galaxies.",
+    "Astronauts conduct experiments in zero gravity.",
+    "SpaceX successfully landed its reusable rocket.",
+    "Mars rover sends back stunning images of the red planet.",
+    # 宗教类 (标签0)
+    "Many people believe in God and practice their religion.",
+    "The debate about the existence of God has been ongoing.",
+    "Different religions have different views on the afterlife.",
     "Religious texts have been translated into many languages.",
-    "The space station orbits Earth every 90 minutes."
+    "The church bell rang to mark the start of the service.",
+    "Prayer is an important part of many people's daily lives.",
+    "Hinduism is one of the world's oldest major religions.",
+    "Buddhism teaches the path to enlightenment.",
+    "People gather in mosques for Friday prayers.",
+    "The Torah is a sacred text in Judaism.",
+    "Religious holidays are celebrated with various traditions.",
+    "Monks meditate to achieve inner peace.",
+    "The Quran is the central religious text of Islam.",
+    "People of faith often find comfort in their beliefs.",
+    "Many churches feature beautiful stained glass windows."
 ]
-labels = [1, 1, 1, 0, 0, 0, 1, 1, 0, 1]
+labels = [1]*15 + [0]*15
 
-# 2. 划分训练集/测试集
+# 2. 划分训练集/测试集 (80%训练, 20%测试)
 X_train, X_test, y_train, y_test = train_test_split(
-    texts, labels, test_size=0.3, random_state=42
+    texts, labels, test_size=0.2, random_state=42, stratify=labels
 )
 
-# 3. 加载【本地离线模型】（关键！）
+# 3. 加载本地离线BERT模型
 embedding_model = SentenceTransformer(MODEL_PATH, local_files_only=True)
 
 # 4. 文本转向量
 X_train_vec = embedding_model.encode(X_train)
 X_test_vec = embedding_model.encode(X_test)
 
-# 5. MLflow 实验
+# ===================== MLflow 训练 + 记录 =====================
+# ✅ 这一行必须加！连接 Jenkins 里启动的 MLflow 服务
+mlflow.set_tracking_uri("http://localhost:5000")
+
 mlflow.set_experiment("文本分类实战（离线BERT版）")
-with mlflow.start_run(run_name="use_local_bert_model"):
-    # 记录参数（会显示你用了离线模型）
+
+with mlflow.start_run(run_name="local_bert_train_v2"):
     params = {
-        "feature_model": "all-MiniLM-L6-v2 (本地离线)",
-        "local_model_path": MODEL_PATH,
+        "feature_model": "all-MiniLM-L6-v2 (离线)",
         "classifier": "LogisticRegression",
         "C": 1.0
     }
     mlflow.log_params(params)
 
-    # 训练
+    # 训练分类器
     model = LogisticRegression(C=1.0, solver="liblinear")
     model.fit(X_train_vec, y_train)
 
-    # 评估
+    # 测试指标
     y_pred = model.predict(X_test_vec)
     acc = accuracy_score(y_test, y_pred)
     mlflow.log_metric("accuracy", acc)
 
-    # 保存模型
-    mlflow.sklearn.log_model(model, "classifier_model")
+    # 保存模型并注册
+    mlflow.sklearn.log_model(
+        sk_model=model,
+        artifact_path="text_classifier_model",
+        registered_model_name="text-classifier"
+    )
 
-    print(f"✅ 运行完成！使用本地离线模型：{MODEL_PATH}")
-    print(f"🎯 模型准确率：{acc:.4f}")
+    print("="*50)
+    print(f"✅ 训练完成！")
+    print(f"🎯 准确率：{acc:.4f}")
+    print(f"📦 模型已存入 MLflow：text-classifier")
+    print("="*50)

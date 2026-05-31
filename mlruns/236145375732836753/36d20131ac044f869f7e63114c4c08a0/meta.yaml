@@ -1,0 +1,15 @@
+artifact_uri: /home/ubuntu/Desktop/auto-ci-demo/mlruns/236145375732836753/36d20131ac044f869f7e63114c4c08a0/artifacts
+deleted_time: 1780144520375
+end_time: 1780123554072
+entry_point_name: ''
+experiment_id: '236145375732836753'
+lifecycle_stage: deleted
+run_id: 36d20131ac044f869f7e63114c4c08a0
+run_name: local_bert_train_v2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780123550494
+status: 3
+tags: []
+user_id: ubuntu

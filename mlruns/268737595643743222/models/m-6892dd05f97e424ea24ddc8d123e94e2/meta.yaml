@@ -1,0 +1,10 @@
+artifact_location: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/268737595643743222/models/m-6892dd05f97e424ea24ddc8d123e94e2/artifacts
+creation_timestamp: 1780274681760
+experiment_id: '268737595643743222'
+last_updated_timestamp: 1780274686435
+model_id: m-6892dd05f97e424ea24ddc8d123e94e2
+model_type: null
+name: model
+source_run_id: 3d4ea1d1b6a04205a106d8705a7d0e73
+status: 2
+status_message: null

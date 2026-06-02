@@ -1,5 +1,0 @@
-LIME解释样本：The movie is good
-good: 0.0413
-The: -0.0106
-is: -0.0106
-movie: -0.0106

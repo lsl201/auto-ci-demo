@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/268737595643743222/52e656b23a8a4b949680b09729914271/artifacts
+end_time: 1780301647886
+entry_point_name: ''
+experiment_id: '268737595643743222'
+lifecycle_stage: active
+run_id: 52e656b23a8a4b949680b09729914271
+run_name: clean-mink-979
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780301641142
+status: 3
+tags: []
+user_id: ubuntu

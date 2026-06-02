@@ -1,0 +1,29 @@
+artifact_path: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/268737595643743222/models/m-4b24324a68d240a28405778714495c89/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.12.0
+model_id: m-4b24324a68d240a28405778714495c89
+model_size_bytes: 1704
+model_uuid: m-4b24324a68d240a28405778714495c89
+prompts: null
+run_id: 52e656b23a8a4b949680b09729914271
+signature:
+  inputs: '[{"type": "string", "name": "text", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-06-01 08:14:01.307897'

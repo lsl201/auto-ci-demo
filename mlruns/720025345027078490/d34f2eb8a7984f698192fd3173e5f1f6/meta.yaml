@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/720025345027078490/d34f2eb8a7984f698192fd3173e5f1f6/artifacts
+end_time: 1780472316274
+entry_point_name: ''
+experiment_id: '720025345027078490'
+lifecycle_stage: active
+run_id: d34f2eb8a7984f698192fd3173e5f1f6
+run_name: 离线模型指标验收_准确率误判率
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780472312682
+status: 4
+tags: []
+user_id: ubuntu

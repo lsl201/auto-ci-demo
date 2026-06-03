@@ -1,3 +1,4 @@
+import allure
 # ==========1.导入依赖包==========
 import pytest
 # pytest测试框架核心库，实现自动化用例执行、标记、断言

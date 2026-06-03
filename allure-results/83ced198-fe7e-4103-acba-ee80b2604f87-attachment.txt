@@ -1,0 +1,2 @@
+🏃 View run test_fairness_legal_indicators at: http://127.0.0.1:5000/#/experiments/720025345027078490/runs/9f8117547f48412b8c144dcd9c7656ee
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/720025345027078490

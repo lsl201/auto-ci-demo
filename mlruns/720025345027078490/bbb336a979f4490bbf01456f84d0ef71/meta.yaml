@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/720025345027078490/bbb336a979f4490bbf01456f84d0ef71/artifacts
+end_time: 1780393832206
+entry_point_name: ''
+experiment_id: '720025345027078490'
+lifecycle_stage: active
+run_id: bbb336a979f4490bbf01456f84d0ef71
+run_name: test_dirty_input_robust[sql_inject-admin' or 1=1---SQL\u6ce8\u5165\u5b57\u7b26]
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780393832077
+status: 4
+tags: []
+user_id: ubuntu

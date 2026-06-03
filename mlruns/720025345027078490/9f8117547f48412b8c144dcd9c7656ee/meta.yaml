@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/720025345027078490/9f8117547f48412b8c144dcd9c7656ee/artifacts
+end_time: 1780403806198
+entry_point_name: ''
+experiment_id: '720025345027078490'
+lifecycle_stage: active
+run_id: 9f8117547f48412b8c144dcd9c7656ee
+run_name: test_fairness_legal_indicators
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780403805893
+status: 3
+tags: []
+user_id: ubuntu

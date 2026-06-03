@@ -1,0 +1,1 @@
+{"uuid": "2702be90-94d0-4844-9919-0707911432c5", "children": ["179f5e63-e658-41f1-b780-034e1d2d3f80"], "befores": [{"name": "mlflow_run_wrapper", "status": "passed", "start": 1780403802533, "stop": 1780403802624}], "afters": [{"name": "mlflow_run_wrapper::0", "status": "passed", "start": 1780403802692, "stop": 1780403802820}], "start": 1780403802533, "stop": 1780403802821}

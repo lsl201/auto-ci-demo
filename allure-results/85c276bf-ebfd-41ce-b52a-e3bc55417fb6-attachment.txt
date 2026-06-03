@@ -1,0 +1,2 @@
+🏃 View run test_fairness_accuracy_balance at: http://127.0.0.1:5000/#/experiments/720025345027078490/runs/e48550ef75bb46099494c382ad27ef0b
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/720025345027078490

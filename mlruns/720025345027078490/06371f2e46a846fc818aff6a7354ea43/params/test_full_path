@@ -1,0 +1,1 @@
+tests/my_custom_tests/test_ai_security.py::TestAISecurityCompliance::test_fairness_legal_indicators

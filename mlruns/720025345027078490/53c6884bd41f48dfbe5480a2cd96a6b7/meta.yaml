@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/720025345027078490/53c6884bd41f48dfbe5480a2cd96a6b7/artifacts
+end_time: 1780394094449
+entry_point_name: ''
+experiment_id: '720025345027078490'
+lifecycle_stage: active
+run_id: 53c6884bd41f48dfbe5480a2cd96a6b7
+run_name: test_dirty_input_robust[garbage_code-\u951f\u65a4\u62f7\u70eb\u70eb\u70eb-\u4e2d\u6587\u4e71\u7801]
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780394094286
+status: 4
+tags: []
+user_id: ubuntu

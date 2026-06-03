@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/720025345027078490/6098e533c18e44a38070f218fc708961/artifacts
+end_time: 1780403803336
+entry_point_name: ''
+experiment_id: '720025345027078490'
+lifecycle_stage: active
+run_id: 6098e533c18e44a38070f218fc708961
+run_name: test_dirty_input_robust[html_script-<script>alert('hack')</script>-HTML\u811a\u672c\u6ce8\u5165]
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780403803109
+status: 3
+tags: []
+user_id: ubuntu

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/809295839071452542/075f0b52354743e48641445f6d4a5b2a/artifacts
+end_time: 1780564458554
+entry_point_name: ''
+experiment_id: '809295839071452542'
+lifecycle_stage: active
+run_id: 075f0b52354743e48641445f6d4a5b2a
+run_name: gregarious-worm-231
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780564457644
+status: 4
+tags: []
+user_id: ubuntu

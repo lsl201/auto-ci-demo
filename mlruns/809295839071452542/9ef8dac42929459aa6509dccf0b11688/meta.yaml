@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/809295839071452542/9ef8dac42929459aa6509dccf0b11688/artifacts
+end_time: 1780564460281
+entry_point_name: ''
+experiment_id: '809295839071452542'
+lifecycle_stage: active
+run_id: 9ef8dac42929459aa6509dccf0b11688
+run_name: persistent-newt-197
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780564459520
+status: 4
+tags: []
+user_id: ubuntu

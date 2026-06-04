@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/809295839071452542/6c8723048f554b7c8c42b362d01b3940/artifacts
+end_time: 1780564462069
+entry_point_name: ''
+experiment_id: '809295839071452542'
+lifecycle_stage: active
+run_id: 6c8723048f554b7c8c42b362d01b3940
+run_name: receptive-dog-976
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780564461379
+status: 4
+tags: []
+user_id: ubuntu

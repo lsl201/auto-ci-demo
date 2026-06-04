@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/809295839071452542/6c40350ec984410a8f103d6204f542ab/artifacts
+end_time: 1780544944203
+entry_point_name: ''
+experiment_id: '809295839071452542'
+lifecycle_stage: active
+run_id: 6c40350ec984410a8f103d6204f542ab
+run_name: unleashed-fowl-550
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780544943830
+status: 3
+tags: []
+user_id: ubuntu

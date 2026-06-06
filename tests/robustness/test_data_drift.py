@@ -48,6 +48,7 @@ def create_drift_samples(text):
 @allure.story("缺失值、缩放、异常值、极端长度鲁棒性")
 @allure.title("数据偏移测试：{raw_data[input_text]}")
 @pytest.mark.robust_drift
+@pytest.mark.risk_legal
 @pytest.mark.parametrize("raw_data", base_samples)
 def test_data_drift_robust(raw_data):
     # 加载离线模型

@@ -36,6 +36,7 @@ def create_ood_samples():
 @allure.story("无关文本不能误判为业务正类")
 @allure.title("OOD测试：{raw_data[input_text]}")
 @pytest.mark.robust_ood
+@pytest.mark.risk_legal
 @pytest.mark.parametrize("raw_data", base_samples)
 def test_ood_robust(raw_data):
     # 加载离线模型

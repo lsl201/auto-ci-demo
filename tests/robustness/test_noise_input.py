@@ -35,6 +35,7 @@ def add_noise(s):
 @allure.story("噪声、空值、乱码鲁棒测试")
 @allure.title("测试脏输入鲁棒性：{raw_data[input_text]}")
 @pytest.mark.robust_noise
+@pytest.mark.risk_legal
 @pytest.mark.parametrize("raw_data", base_samples)
 def test_noise_robust(raw_data):
     model = get_offline_model()

@@ -48,6 +48,7 @@ def create_fairness_samples(text):
 @allure.story("身份中立、无偏见、无歧视、合规输出")
 @allure.title("公平性合规测试：{raw_data[input_text]}")
 @pytest.mark.robust_fair
+@pytest.mark.risk_legal
 @pytest.mark.parametrize("raw_data", base_samples)
 def test_fairness_compliance(raw_data):
     # 加载离线模型

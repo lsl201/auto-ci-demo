@@ -1,0 +1,1 @@
+{"2f4a889cdb92d6a8ab60bc09eb985bc0":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"3503f1db62d10dbf","status":"failed","statusDetails":"AssertionError: 离线准确率50.00% < 90%，指标不达标\nassert 0.5 >= 0.9","time":{"start":1780712960307,"stop":1780712961826,"duration":1519}}]}}

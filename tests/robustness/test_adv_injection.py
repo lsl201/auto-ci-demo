@@ -56,6 +56,7 @@ def create_adversarial_samples(text):
 @allure.story("抵御恶意指令、提示词攻击、干扰文本")
 @allure.title("对抗注入测试：{raw_data[input_text]}")
 @pytest.mark.robust_adv
+@pytest.mark.risk_legal
 @pytest.mark.parametrize("raw_data", base_samples)
 def test_adversarial_injection_robust(raw_data):
     # 加载模型

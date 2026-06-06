@@ -22,6 +22,7 @@ mlflow.set_experiment(EXPERIMENT)
 # ==========3.用例装饰器（Pytest+Allure报告配置）==========
 @pytest.mark.metric
 # pytest自定义标记metric，执行命令`pytest -m metric`可只筛选运行本模块所有指标用例，适配CI流水线分组执行
+@pytest.mark.biz_metric  # ✅ 在这里加！！！
 @allure.feature("离线模型业务指标验收")
 # Allure报告大模块分类：报告左侧菜单【离线模型业务指标验收】，区分功能模块
 @allure.title("离线全量测试集：准确率+误判率核算")

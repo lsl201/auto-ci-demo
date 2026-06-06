@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"836c0966d2af645a0e77dae8acc72fe4","name":"离线模型业务指标验收","statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1}}]}
+{"total":1,"items":[{"uid":"9bec24b88b4b7b8f73395f28fbf04dc0","name":"AI模型鲁棒性测试","statistic":{"failed":5,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":5}}]}

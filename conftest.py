@@ -1,4 +1,6 @@
 import os,shutil
+import gc, torch
+import pytest
 
 # 全局会话启动只执行一次，所有用例批量运行只清一次allure
 def pytest_configure(config):
@@ -6,3 +8,11 @@ def pytest_configure(config):
     if os.path.exists(dir_allure):
         shutil.rmtree(dir_allure)
     os.makedirs(dir_allure, exist_ok=True)
+
+
+@pytest.fixture(autouse=True)
+def free_mem():
+    yield
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()

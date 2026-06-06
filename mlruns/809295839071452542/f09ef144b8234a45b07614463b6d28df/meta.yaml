@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/809295839071452542/f09ef144b8234a45b07614463b6d28df/artifacts
+end_time: 1780725627853
+entry_point_name: ''
+experiment_id: '809295839071452542'
+lifecycle_stage: active
+run_id: f09ef144b8234a45b07614463b6d28df
+run_name: 数据漂移测试_做工粗糙不好用
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780725627296
+status: 4
+tags: []
+user_id: ubuntu

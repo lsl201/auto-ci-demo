@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/809295839071452542/b304cc6502224161a9706d9a76cffd37/artifacts
+end_time: 1780725615968
+entry_point_name: ''
+experiment_id: '809295839071452542'
+lifecycle_stage: active
+run_id: b304cc6502224161a9706d9a76cffd37
+run_name: 离线模型指标验收_准确率误判率
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780725613077
+status: 4
+tags: []
+user_id: ubuntu

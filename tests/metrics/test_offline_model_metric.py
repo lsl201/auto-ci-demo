@@ -1,79 +1,113 @@
 import allure
-# ==========1.导入依赖包==========
 import pytest
-# pytest测试框架核心库，实现自动化用例执行、标记、断言
 import pandas as pd
-# 表格数据处理，读取csv离线测试数据集
-from sklearn.metrics import accuracy_score, confusion_matrix
-# 机器学习指标：accuracy=准确率，confusion_matrix=混淆矩阵（拆解四类误判）
+import evaluate
+from evaluate import load, combine
 import mlflow
-# MLflow实验追踪：记录参数、指标，留存模型测试数据，版本对比
+import requests # ✅新增：http请求本地模拟线上接口
 from tests.common.model_loader import get_offline_model
-# 导入自定义公共函数：从项目common目录加载离线保存好的模型文件
 
-# ==========2.全局常量：MLflow实验配置==========
+# ==========1.新增：模拟线上API地址常量【改动1】==========
+ONLINE_API_URL = "http://127.0.0.1:8000/predict"
+
 EXPERIMENT = "AI_Security_Fairness_Test"
-# 定义实验名，所有离线指标测试统一归入该MLflow实验，方便UI集中查看
 mlflow.set_tracking_uri("file:./mlruns")
-# 配置MLflow存储路径：指标、参数落地保存到本地./mlruns文件夹，离线可用，不依赖远端服务
 mlflow.set_experiment(EXPERIMENT)
-# 将后续测试Run绑定上面定义的实验
 
-# ==========3.用例装饰器（Pytest+Allure报告配置）==========
+
 @pytest.mark.metric
-# pytest自定义标记metric，执行命令`pytest -m metric`可只筛选运行本模块所有指标用例，适配CI流水线分组执行
-@pytest.mark.biz_metric  # ✅ 在这里加！！！
-@allure.feature("离线模型业务指标验收")
-# Allure报告大模块分类：报告左侧菜单【离线模型业务指标验收】，区分功能模块
-@allure.title("离线全量测试集：准确率+误判率核算")
-# Allure单条用例标题，生成测试报告时展示用例名称，替代默认函数名，可读性更强
+@pytest.mark.biz_metric
+@allure.feature("离线模型业务指标验收+线上部署衰减对比") # ✅改动：allure描述更新
+@allure.title("离线vs模拟线上API：准确率&误判率衰减核算") # ✅改动标题
 def test_offline_acc_err_rate():
-    """离线模型全量数据集测试：计算准确率、整体误判率、FPR假正误判、FNR假负误判"""
-    # ==========4.MLflow上下文：开启单次测试Run（一次测试=一条Run记录）==========
-    with mlflow.start_run(run_name="离线模型指标验收_准确率误判率"):
-    # with自动管理run生命周期：代码块开始创建Run，代码结束自动关闭Run，无需手动end_run；run_name自定义本次测试名称
-
-        # 4.1读取离线固定标注测试集
+    """同数据集：本地离线自有模型 + 本地API(模拟线上小模型)双指标，自动计算部署衰减"""
+    metric = combine([load("accuracy"),load("precision"),load("recall"),load("confusion_matrix")])
+    with mlflow.start_run(run_name="离线vs模拟线上_指标衰减验收"):
         df = pd.read_csv("tests/data/offline_test_dataset.csv")
-        # 读取项目固定离线测试csv：固定数据集=基准，每次测试复用同一数据，保证指标变化只来自模型，不受测试集干扰
         x_data = df["input_text"].tolist()
-        # 提取输入特征（模型入参文本）转为列表
         y_true = df["true_label"].tolist()
-        # 提取真实标注标签（人工标准答案0/1）
         mlflow.log_param("test_sample_num", len(df))
-        # log_param记录**参数（静态值）**：把测试样本总数存入MLflow，后续查看报告可知本次测试样本量
 
-        # 4.2加载离线模型
+        # ==========【原有逻辑不变：离线自有模型推理】==========
         model = get_offline_model()
-        # 调用公共方法，读取项目目录离线保存的pkl模型文件，完成模型加载（不用重复训练，纯离线验收）
-        y_pred = model.predict(x_data)
-        # 全量测试集批量推理，生成模型预测标签
+        y_pred_offline = model.predict(x_data) # 离线预测
+        res_offline = metric.compute(predictions=y_pred_offline, references=y_true)
+        tn, fp, fn, tp = res_offline["confusion_matrix"].ravel()
+        # 离线指标
+        acc_off = res_offline["accuracy"]
+        err_off = 1 - acc_off
+        fpr_off = fp/(fp+tn) if (fp+tn)!=0 else 0
+        fnr_off = fn/(fn+tp) if (fn+tp)!=0 else 0
+        pre_off = res_offline["precision"]
+        rec_off = res_offline["recall"]
 
-        # 4.3核心指标计算（准确率+多层误判率）
-        acc = accuracy_score(y_true, y_pred)
-        # 准确率=预测正确样本/总样本，业务核心指标
-        err_total = 1 - acc
-        # 整体误判率=1-准确率，全样本错误占比
-        tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
-        # confusion_matrix生成2*2混淆矩阵；ravel()扁平化展开成4个值
-        # TN：真负(负样本预测正确)、FP：假正(负错判正→误杀)、FN：假负(正错判负→漏放)、TP：真正(正样本预测正确)
-        fpr = fp/(fp+tn) if (fp+tn)!=0 else 0
-        # FPR假正误判率：负样本里被错误判成正的比例（业务误拦截率），分母防除0报错
-        fnr = fn/(fn+tp) if (fn+tp)!=0 else 0
-        # FNR假负误判率：正样本里被错误判成负的比例（业务漏检率）
+        # ==========【新增代码块：调用本地FastAPI=模拟线上推理【改动2】】==========
+        try:
+            resp = requests.post(ONLINE_API_URL, json={"text_list": x_data}, timeout=(3,12))
+            resp.raise_for_status()
+            # 下面全缩进进try内部
+            y_pred_online = resp.json()["pred_label"]
+            res_online = metric.compute(predictions=y_pred_online, references=y_true)
+            tn_on, fp_on, fn_on, tp_on = res_online["confusion_matrix"].ravel()
+            # 线上指标
+            acc_on = res_online["accuracy"]
+            err_on = 1 - acc_on
+            fpr_on = fp_on/(fp_on+tn_on) if (fp_on+tn_on)!=0 else 0
+            fnr_on = fn_on/(fn_on+tp_on) if (fn_on+tp_on)!=0 else 0
+            pre_on = res_online["precision"]
+            rec_on = res_online["recall"]
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+            assert False, f"线上API{ONLINE_API_URL}未启动/连接失败：{str(e)}"
 
-        # 4.4MLflow持久化指标（数值类用log_metric）
-        mlflow.log_metric("offline_accuracy", acc)
-        # 记录离线准确率，MLflow保存历史数值，迭代新版本可对比指标涨跌
-        mlflow.log_metric("total_error_rate", err_total)
-        # 记录整体误判率
-        mlflow.log_metric("false_positive_rate_FPR", fpr)
-        # 记录误杀率FPR
-        mlflow.log_metric("false_negative_rate_FNR", fnr)
-        # 记录漏放率FNR
+        # ==========【新增：计算指标衰减（线上-离线，负数=线上变差）【改动3】】==========
+        decay_acc = acc_on - acc_off    # 准确率衰减
+        decay_err = err_on - err_off    # 误判上涨幅度
+        decay_fpr = fpr_on - fpr_off
+        decay_fnr = fnr_on - fnr_off
+        decay_pre = pre_on - pre_off
+        decay_rec = rec_on - rec_off
 
-        # 4.5业务门禁断言：不达标直接用例失败、阻断CI上线
-        assert acc >= 0.90, f"离线准确率{acc:.2%} < 90%，指标不达标"
-        # 业务阈值：准确率低于90%抛出异常，pytest标记用例失败
-        assert err_total <= 0.10, f"整体误判率{err_total:.2%} >10%，上线风险超标"
-        # 整体错误率超10%阻断上线，是AI模型上线质量门禁
+        # ==========Allure附件：离线+线上+衰减全数据【改动4：扩充附件】==========
+        all_data = {
+            # 离线指标
+            "off_准确率":f"{acc_off:.4f}", "off_总误判":f"{err_off:.4f}",
+            "off_FPR":f"{fpr_off:.4f}", "off_FNR":f"{fnr_off:.4f}",
+            "off_精确率":f"{pre_off:.4f}", "off_召回":f"{rec_off:.4f}",
+            # 线上指标
+            "on_准确率":f"{acc_on:.4f}", "on_总误判":f"{err_on:.4f}",
+            "on_FPR":f"{fpr_on:.4f}", "on_FNR":f"{fnr_on:.4f}",
+            "on_精确率":f"{pre_on:.4f}", "on_召回":f"{rec_on:.4f}",
+            # 衰减值
+            "准确率衰减":f"{decay_acc:.4f}", "误判涨幅":f"{decay_err:.4f}"
+        }
+        for k,v in all_data.items():
+            allure.attach(v, name=k, attachment_type=allure.attachment_type.TEXT)
+
+        # ==========MLflow记录：离线、线上、衰减三类指标【改动5：新增线上&衰减埋点】==========
+        # 离线指标入库（原有不变）
+        mlflow.log_metric("offline_accuracy", acc_off)
+        mlflow.log_metric("total_error_rate", err_off)
+        mlflow.log_metric("false_positive_rate_FPR", fpr_off)
+        mlflow.log_metric("false_negative_rate_FNR", fnr_off)
+        mlflow.log_metric("precision_off", pre_off)
+        mlflow.log_metric("recall_off", rec_off)
+
+        # ✅新增：线上版本指标入库
+        mlflow.log_metric("online_accuracy", acc_on)
+        mlflow.log_metric("online_total_error", err_on)
+        mlflow.log_metric("online_FPR", fpr_on)
+        mlflow.log_metric("online_FNR", fnr_on)
+        mlflow.log_metric("precision_on", pre_on)
+        mlflow.log_metric("recall_on", rec_on)
+
+        # ✅新增：衰减差值入库，用于版本对比
+        mlflow.log_metric("decay_accuracy", decay_acc)
+        mlflow.log_metric("decay_err_rate", decay_err)
+        mlflow.log_metric("decay_FPR", decay_fpr)
+        mlflow.log_metric("decay_FNR", decay_fnr)
+
+        # ==========业务门禁断言【改动6：新增上线衰减门禁，衰减超标阻断CI】==========
+        assert acc_off >= 0.90, f"离线准确率{acc_off:.2%}<90%，基线不合格"
+        assert err_off <= 0.10, f"离线误判{err_off:.2%}>10%，基线不合格"
+        # 新增：线上相比离线准确率下跌不能超3%，超了判定部署失效
+        assert decay_acc >= -0.03, f"线上准确率相较离线下跌{abs(decay_acc):.2%}>3%，部署衰减超标禁止上线"

@@ -1,0 +1,3 @@
+input_text,true_label,pred_label
+做工粗糙不好用,0,1
+卡顿频繁不推荐,0,1

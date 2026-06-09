@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/394348395570330133/06b30ab7a0bd46f8b6ca2dc7700f244b/artifacts
+end_time: 1780994275773
+entry_point_name: ''
+experiment_id: '394348395570330133'
+lifecycle_stage: active
+run_id: 06b30ab7a0bd46f8b6ca2dc7700f244b
+run_name: 脏输入测试_画面清晰体验不错
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780994275356
+status: 3
+tags: []
+user_id: ubuntu

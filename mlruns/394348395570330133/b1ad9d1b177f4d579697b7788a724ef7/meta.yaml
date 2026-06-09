@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/394348395570330133/b1ad9d1b177f4d579697b7788a724ef7/artifacts
+end_time: 1781009709438
+entry_point_name: ''
+experiment_id: '394348395570330133'
+lifecycle_stage: active
+run_id: b1ad9d1b177f4d579697b7788a724ef7
+run_name: 对抗注入_做工粗糙不好用
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781009708707
+status: 4
+tags: []
+user_id: ubuntu

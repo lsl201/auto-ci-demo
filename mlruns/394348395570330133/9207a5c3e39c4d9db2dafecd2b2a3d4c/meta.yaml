@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/394348395570330133/9207a5c3e39c4d9db2dafecd2b2a3d4c/artifacts
+end_time: 1780996849918
+entry_point_name: ''
+experiment_id: '394348395570330133'
+lifecycle_stage: active
+run_id: 9207a5c3e39c4d9db2dafecd2b2a3d4c
+run_name: 对抗注入_这款手机性价比很高
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780996849157
+status: 3
+tags: []
+user_id: ubuntu

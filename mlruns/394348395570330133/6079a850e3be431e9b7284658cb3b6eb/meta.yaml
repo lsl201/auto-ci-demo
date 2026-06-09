@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/394348395570330133/6079a850e3be431e9b7284658cb3b6eb/artifacts
+end_time: 1780996872884
+entry_point_name: ''
+experiment_id: '394348395570330133'
+lifecycle_stage: active
+run_id: 6079a850e3be431e9b7284658cb3b6eb
+run_name: OOD测试_这款手机性价比很高
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780996872400
+status: 4
+tags: []
+user_id: ubuntu

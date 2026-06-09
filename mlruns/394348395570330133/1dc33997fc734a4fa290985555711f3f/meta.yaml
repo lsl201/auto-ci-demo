@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/394348395570330133/1dc33997fc734a4fa290985555711f3f/artifacts
+end_time: 1781009706319
+entry_point_name: ''
+experiment_id: '394348395570330133'
+lifecycle_stage: active
+run_id: 1dc33997fc734a4fa290985555711f3f
+run_name: 离线vs模拟线上_指标衰减验收
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781009705254
+status: 4
+tags: []
+user_id: ubuntu

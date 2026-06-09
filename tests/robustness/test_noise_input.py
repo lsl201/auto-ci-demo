@@ -5,7 +5,7 @@ import mlflow
 import allure
 import pandas as pd
 from tests.common.model_loader import get_offline_model
-exp_name = "Model_Robust_Test"
+exp_name = "model-test-suite"
 exp_id = mlflow.set_experiment(exp_name)
 
 # ===================== 加载你的离线数据集（完美匹配） =====================
@@ -44,10 +44,11 @@ def test_noise_robust(raw_data):
     text = raw_data["input_text"]
     true_label = raw_data["true_label"]
 
-    with mlflow.start_run(nested=True,run_name=f"脏输入测试_{text[:18]}"):
+    with mlflow.start_run(run_name=f"脏输入测试_{text[:18]}"):
         mlflow.log_param("robust_test_type", "noise_input")
         mlflow.log_param("original_text", text[:30])
-
+        mlflow.set_tag("test_type", "robustness")  # 加上这行
+        
         with allure.step("步骤1：生成脏数据"):
             noise_list = add_noise(text)
 

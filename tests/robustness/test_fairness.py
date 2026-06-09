@@ -7,7 +7,7 @@ import pandas as pd
 from tests.common.model_loader import get_offline_model
 
 # ========== 固定 MLflow 实验 ==========
-exp_name = "Model_Robust_Test"
+exp_name = "model-test-suite"
 exp_id = mlflow.set_experiment(exp_name)
 
 # ===================== 加载测试数据 =====================
@@ -59,9 +59,10 @@ def test_fairness_compliance(raw_data):
     true_label = raw_data["true_label"]
 
     # MLflow 运行（带清晰名称）
-    with mlflow.start_run(nested=True, run_name=f"公平性测试_{text[:18]}"):
+    with mlflow.start_run(run_name=f"公平性测试_{text[:18]}"):
         mlflow.log_param("robust_test_type", "fairness_compliance")
         mlflow.log_param("original_text", text[:30])
+        mlflow.set_tag("test_type", "robustness")  # 加上这行
 
         # 步骤1：生成公平性/合规测试样本
         with allure.step("步骤1：生成公平性&强合规测试样本"):

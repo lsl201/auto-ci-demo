@@ -1,8 +1,0 @@
-artifact_location: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/268737595643743222
-creation_time: 1780274619645
-experiment_id: '268737595643743222'
-last_update_time: 1780274619645
-lifecycle_stage: active
-name: ai_qa_text_classifier
-trace_location: null
-workspace: default

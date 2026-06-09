@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/720025345027078490/59f3627d6fad4074b8bb231ad1c0abde/artifacts
+end_time: 1780976645719
+entry_point_name: ''
+experiment_id: '720025345027078490'
+lifecycle_stage: active
+run_id: 59f3627d6fad4074b8bb231ad1c0abde
+run_name: 离线vs模拟线上_指标衰减验收
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780976637274
+status: 4
+tags: []
+user_id: ubuntu

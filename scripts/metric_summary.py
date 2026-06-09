@@ -6,7 +6,7 @@ import allure
 
 # ========== 配置项（按你的环境修改） ==========
 MLFLOW_TRACKING_URI = "file:///home/ubuntu/Desktop/auto-ci-demo/mlruns"
-EXPERIMENT_NAME = "AI_Security_Model_Test"  # 改成你的实验名
+EXPERIMENT_NAME = "AI_Security_Fairness_Test"  # 改成你的实验名
 OUTPUT_CSV_PATH = "metrics_summary.csv"
 
 def main():
@@ -37,8 +37,8 @@ def main():
         online_acc = run.get("metrics.online_accuracy", -1)
         decay_acc = run.get("metrics.decay_accuracy", -1)
         offline_err = run.get("metrics.total_error_rate", -1)
-        offline_fpr = run.get("metrics.false_positive_rate", -1)
-        offline_fnr = run.get("metrics.false_negative_rate", -1)
+        offline_fpr = run.get("metrics.metrics.false_positive_rate_FPR", -1)
+        offline_fnr = run.get("metrics.false_negative_rate_FNR", -1)
 
         rows.append({
             "run_id": run_id,

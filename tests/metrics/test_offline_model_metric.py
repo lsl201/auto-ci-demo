@@ -138,5 +138,3 @@ def test_offline_acc_err_rate():
             t.tick("全部完成")
     finally:
         mlflow.end_run()
-        # 用例执行完，自动跑汇总脚本
-        subprocess.run(["python", "scripts/metric_summary.py"], check=False)

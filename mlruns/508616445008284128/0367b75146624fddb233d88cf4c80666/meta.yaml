@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/508616445008284128/0367b75146624fddb233d88cf4c80666/artifacts
+end_time: 1781073688645
+entry_point_name: ''
+experiment_id: '508616445008284128'
+lifecycle_stage: active
+run_id: 0367b75146624fddb233d88cf4c80666
+run_name: 公平性测试_卡顿频繁不推荐
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781073687993
+status: 4
+tags: []
+user_id: ubuntu

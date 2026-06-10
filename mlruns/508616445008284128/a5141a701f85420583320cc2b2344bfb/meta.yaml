@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/508616445008284128/a5141a701f85420583320cc2b2344bfb/artifacts
+end_time: 1781073674845
+entry_point_name: ''
+experiment_id: '508616445008284128'
+lifecycle_stage: active
+run_id: a5141a701f85420583320cc2b2344bfb
+run_name: 对抗注入_画面清晰体验不错
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781073673904
+status: 3
+tags: []
+user_id: ubuntu

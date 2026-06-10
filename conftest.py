@@ -3,6 +3,7 @@ import shutil
 import gc
 import torch
 import pytest
+import mlflow
 
 # 全局清空allure结果目录
 def pytest_configure(config):
@@ -10,6 +11,10 @@ def pytest_configure(config):
     if os.path.exists(dir_allure):
         shutil.rmtree(dir_allure)
     os.makedirs(dir_allure, exist_ok=True)
+
+    # 🔥 新增的 MLflow 全局配置
+    mlflow.set_tracking_uri("file:///home/ubuntu/Desktop/auto-ci-demo/mlruns")
+    mlflow.set_experiment("model-test-suite")
 
 # 自动释放显存
 @pytest.fixture(autouse=True)

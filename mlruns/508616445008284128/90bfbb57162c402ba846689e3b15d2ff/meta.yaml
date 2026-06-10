@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/508616445008284128/90bfbb57162c402ba846689e3b15d2ff/artifacts
+end_time: 1781072599202
+entry_point_name: ''
+experiment_id: '508616445008284128'
+lifecycle_stage: active
+run_id: 90bfbb57162c402ba846689e3b15d2ff
+run_name: OOD测试_画面清晰体验不错
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781072597318
+status: 4
+tags: []
+user_id: ubuntu

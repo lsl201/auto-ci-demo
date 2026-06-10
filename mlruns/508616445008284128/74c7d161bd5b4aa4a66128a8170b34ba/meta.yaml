@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/508616445008284128/74c7d161bd5b4aa4a66128a8170b34ba/artifacts
+end_time: 1781071115085
+entry_point_name: ''
+experiment_id: '508616445008284128'
+lifecycle_stage: active
+run_id: 74c7d161bd5b4aa4a66128a8170b34ba
+run_name: OOD测试_卡顿频繁不推荐
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781071114476
+status: 4
+tags: []
+user_id: ubuntu

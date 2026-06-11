@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/508616445008284128/7bf32843f8fb4988b6225af440717650/artifacts
+end_time: 1781084071648
+entry_point_name: ''
+experiment_id: '508616445008284128'
+lifecycle_stage: active
+run_id: 7bf32843f8fb4988b6225af440717650
+run_name: 数据漂移测试_卡顿频繁不推荐
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781084070762
+status: 4
+tags: []
+user_id: ubuntu

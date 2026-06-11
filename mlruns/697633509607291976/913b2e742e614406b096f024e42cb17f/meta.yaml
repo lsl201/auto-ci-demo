@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/697633509607291976/913b2e742e614406b096f024e42cb17f/artifacts
+deleted_time: 1781095453446
+end_time: 1781089961763
+entry_point_name: ''
+experiment_id: '697633509607291976'
+lifecycle_stage: deleted
+run_id: 913b2e742e614406b096f024e42cb17f
+run_name: test_fairness_compliance[raw_data0]
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781089961125
+status: 3
+tags: []
+user_id: ubuntu

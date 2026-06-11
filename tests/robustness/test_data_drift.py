@@ -7,9 +7,6 @@ import allure
 import pandas as pd
 from tests.common.model_loader import get_offline_model
 
-# ========== 固定 MLflow 实验，防止报错 ==========
-exp_name = "model-test-suite"
-exp_id = mlflow.set_experiment(exp_name)
 
 # ===================== 加载测试数据 =====================
 def get_base_samples():
@@ -50,7 +47,7 @@ def create_drift_samples(text):
 @pytest.mark.robust_drift
 @pytest.mark.risk_legal
 @pytest.mark.parametrize("raw_data", base_samples)
-def test_data_drift_robust(raw_data):
+def test_data_drift_robust(raw_data,test_type):
     # 加载离线模型
     model = get_offline_model()
 
@@ -62,8 +59,7 @@ def test_data_drift_robust(raw_data):
     with mlflow.start_run(run_name=f"数据漂移测试_{text[:18]}"):
         mlflow.log_param("robust_test_type", "data_drift")
         mlflow.log_param("original_text", text[:30])
-        mlflow.set_tag("test_type", "robustness")  # 加上这行
-        
+        mlflow.set_tag("test_type", test_type)
         # 步骤1：生成分布偏移样本
         with allure.step("步骤1：生成数据偏移样本"):
             drift_list = create_drift_samples(text)

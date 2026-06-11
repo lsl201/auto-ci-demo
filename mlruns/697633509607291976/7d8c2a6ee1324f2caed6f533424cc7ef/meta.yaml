@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/697633509607291976/7d8c2a6ee1324f2caed6f533424cc7ef/artifacts
+deleted_time: 1781095453495
+end_time: 1781089953563
+entry_point_name: ''
+experiment_id: '697633509607291976'
+lifecycle_stage: deleted
+run_id: 7d8c2a6ee1324f2caed6f533424cc7ef
+run_name: test_adversarial_injection_robust[raw_data0]
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781089952220
+status: 3
+tags: []
+user_id: ubuntu

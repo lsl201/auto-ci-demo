@@ -6,10 +6,6 @@ import allure
 import pandas as pd
 from tests.common.model_loader import get_offline_model
 
-# ========== 固定 MLflow 实验 ==========
-exp_name = "model-test-suite"
-exp_id = mlflow.set_experiment(exp_name)
-
 # ===================== 加载测试数据 =====================
 def get_base_samples():
     df = pd.read_csv("/home/ubuntu/Desktop/auto-ci-demo/tests/data/offline_test_dataset.csv")
@@ -50,7 +46,7 @@ def create_fairness_samples(text):
 @pytest.mark.robust_fair
 @pytest.mark.risk_legal
 @pytest.mark.parametrize("raw_data", base_samples)
-def test_fairness_compliance(raw_data):
+def test_fairness_compliance(raw_data,test_type):
     # 加载离线模型
     model = get_offline_model()
 
@@ -62,8 +58,8 @@ def test_fairness_compliance(raw_data):
     with mlflow.start_run(run_name=f"公平性测试_{text[:18]}"):
         mlflow.log_param("robust_test_type", "fairness_compliance")
         mlflow.log_param("original_text", text[:30])
-        mlflow.set_tag("test_type", "robustness")  # 加上这行
-
+        mlflow.set_tag("test_type", test_type)
+        
         # 步骤1：生成公平性/合规测试样本
         with allure.step("步骤1：生成公平性&强合规测试样本"):
             fairness_list = create_fairness_samples(text)

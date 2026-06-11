@@ -6,9 +6,6 @@ import allure
 import pandas as pd
 from tests.common.model_loader import get_offline_model
 
-# ========== 固定 MLflow 实验，防止报错 ==========
-exp_name = "model-test-suite"
-exp_id = mlflow.set_experiment(exp_name)
 
 # ===================== 加载测试数据 =====================
 def get_base_samples():
@@ -38,7 +35,7 @@ def create_ood_samples():
 @pytest.mark.robust_ood
 @pytest.mark.risk_legal
 @pytest.mark.parametrize("raw_data", base_samples)
-def test_ood_robust(raw_data):
+def test_ood_robust(raw_data,test_type):
     # 加载离线模型
     model = get_offline_model()
     text = raw_data["input_text"]
@@ -46,7 +43,7 @@ def test_ood_robust(raw_data):
     # MLflow 记录
     with mlflow.start_run(run_name=f"OOD测试_{text[:18]}"):
         mlflow.log_param("robust_test_type", "OOD_sample")
-        mlflow.set_tag("test_type", "robustness")  # 加上这行
+        mlflow.set_tag("test_type", test_type)
 
         with allure.step("步骤1：加载域外测试样本"):
             # 1. 生成域外样本

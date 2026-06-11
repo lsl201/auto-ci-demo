@@ -7,9 +7,6 @@ import allure
 import pandas as pd
 from tests.common.model_loader import get_offline_model
 
-# ========== 固定 MLflow 实验 ==========
-exp_name = "model-test-suite"
-exp_id = mlflow.set_experiment(exp_name)
 
 # ===================== 加载测试数据 =====================
 def get_base_samples():
@@ -58,7 +55,7 @@ def create_adversarial_samples(text):
 @pytest.mark.robust_adv
 @pytest.mark.risk_legal
 @pytest.mark.parametrize("raw_data", base_samples)
-def test_adversarial_injection_robust(raw_data):
+def test_adversarial_injection_robust(raw_data,test_type):
     # 加载模型
     model = get_offline_model()
     
@@ -70,7 +67,7 @@ def test_adversarial_injection_robust(raw_data):
     with mlflow.start_run(run_name=f"对抗注入_{text[:18]}"):
         mlflow.log_param("robust_test_type", "adversarial_injection")
         mlflow.log_param("original_text", text[:30])
-        mlflow.set_tag("test_type", "robustness")  # 加上这行
+        mlflow.set_tag("test_type", test_type)
         # 步骤1：生成对抗样本
         with allure.step("步骤1：生成对抗注入&异常提示词样本"):
             adv_list = create_adversarial_samples(text)

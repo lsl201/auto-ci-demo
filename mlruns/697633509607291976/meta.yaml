@@ -1,0 +1,8 @@
+artifact_location: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/697633509607291976
+creation_time: 1781089952216
+experiment_id: '697633509607291976'
+last_update_time: 1781089952216
+lifecycle_stage: active
+name: model-test-suite-robustness
+trace_location: null
+workspace: default

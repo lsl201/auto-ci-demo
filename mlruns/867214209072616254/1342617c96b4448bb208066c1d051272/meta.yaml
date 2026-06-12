@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/1342617c96b4448bb208066c1d051272/artifacts
+end_time: 1781182010131
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 1342617c96b4448bb208066c1d051272
+run_name: classy-whale-236
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781182009074
+status: 3
+tags: []
+user_id: ubuntu

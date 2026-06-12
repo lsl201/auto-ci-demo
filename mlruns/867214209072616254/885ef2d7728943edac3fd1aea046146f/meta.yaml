@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/885ef2d7728943edac3fd1aea046146f/artifacts
+end_time: 1781181628196
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 885ef2d7728943edac3fd1aea046146f
+run_name: upbeat-ox-803
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181627316
+status: 3
+tags: []
+user_id: ubuntu

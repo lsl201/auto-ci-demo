@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/71d84c3f933b45f995a09a4b8afce94e/artifacts
+end_time: 1781182000118
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 71d84c3f933b45f995a09a4b8afce94e
+run_name: honorable-ray-130
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181998940
+status: 3
+tags: []
+user_id: ubuntu

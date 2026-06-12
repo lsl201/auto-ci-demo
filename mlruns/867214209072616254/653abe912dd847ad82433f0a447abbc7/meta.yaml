@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/653abe912dd847ad82433f0a447abbc7/artifacts
+end_time: 1781181893141
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 653abe912dd847ad82433f0a447abbc7
+run_name: capricious-ray-450
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181892262
+status: 3
+tags: []
+user_id: ubuntu

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/773995501466085341/1a0063849b53409388718c121d6a7371/artifacts
+end_time: 1781180150260
+entry_point_name: ''
+experiment_id: '773995501466085341'
+lifecycle_stage: active
+run_id: 1a0063849b53409388718c121d6a7371
+run_name: gentle-moth-643
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781180148408
+status: 3
+tags: []
+user_id: ubuntu

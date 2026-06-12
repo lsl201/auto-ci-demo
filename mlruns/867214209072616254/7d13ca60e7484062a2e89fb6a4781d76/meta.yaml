@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/7d13ca60e7484062a2e89fb6a4781d76/artifacts
+end_time: 1781159888268
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 7d13ca60e7484062a2e89fb6a4781d76
+run_name: 脏输入测试_这款手机性价比很高
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781159887697
+status: 3
+tags: []
+user_id: ubuntu

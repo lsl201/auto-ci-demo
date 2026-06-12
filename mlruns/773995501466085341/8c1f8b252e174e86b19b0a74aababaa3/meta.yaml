@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/773995501466085341/8c1f8b252e174e86b19b0a74aababaa3/artifacts
+end_time: 1781181985321
+entry_point_name: ''
+experiment_id: '773995501466085341'
+lifecycle_stage: active
+run_id: 8c1f8b252e174e86b19b0a74aababaa3
+run_name: gentle-hare-171
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181984409
+status: 3
+tags: []
+user_id: ubuntu

@@ -1,0 +1,8 @@
+artifact_location: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/773995501466085341
+creation_time: 1781159657570
+experiment_id: '773995501466085341'
+last_update_time: 1781159657570
+lifecycle_stage: active
+name: model-test-suite-offline
+trace_location: null
+workspace: default

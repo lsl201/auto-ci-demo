@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/f04b65e5d80542d5b8ca71ba8d2c3fda/artifacts
+end_time: 1781182012880
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: f04b65e5d80542d5b8ca71ba8d2c3fda
+run_name: funny-wasp-635
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781182011790
+status: 3
+tags: []
+user_id: ubuntu

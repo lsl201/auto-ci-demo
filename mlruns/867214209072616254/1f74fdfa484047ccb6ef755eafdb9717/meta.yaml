@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/1f74fdfa484047ccb6ef755eafdb9717/artifacts
+end_time: 1781181895274
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 1f74fdfa484047ccb6ef755eafdb9717
+run_name: caring-shoat-20
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181894434
+status: 3
+tags: []
+user_id: ubuntu

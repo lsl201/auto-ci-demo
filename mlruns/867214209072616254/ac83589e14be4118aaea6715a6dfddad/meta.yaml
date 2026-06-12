@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/ac83589e14be4118aaea6715a6dfddad/artifacts
+end_time: 1781181997133
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: ac83589e14be4118aaea6715a6dfddad
+run_name: fearless-hare-811
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181995877
+status: 3
+tags: []
+user_id: ubuntu

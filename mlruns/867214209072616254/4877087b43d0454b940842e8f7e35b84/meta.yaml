@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/4877087b43d0454b940842e8f7e35b84/artifacts
+end_time: 1781181896369
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 4877087b43d0454b940842e8f7e35b84
+run_name: nervous-newt-749
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181895500
+status: 3
+tags: []
+user_id: ubuntu

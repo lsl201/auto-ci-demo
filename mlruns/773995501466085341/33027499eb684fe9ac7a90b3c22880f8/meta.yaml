@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/773995501466085341/33027499eb684fe9ac7a90b3c22880f8/artifacts
+end_time: 1781169902195
+entry_point_name: ''
+experiment_id: '773995501466085341'
+lifecycle_stage: active
+run_id: 33027499eb684fe9ac7a90b3c22880f8
+run_name: kindly-shoat-286
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781169889783
+status: 3
+tags: []
+user_id: ubuntu

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/62e2304d6d2b4ebaa752bab94df5a7cb/artifacts
+end_time: 1781181621038
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 62e2304d6d2b4ebaa752bab94df5a7cb
+run_name: monumental-skink-212
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181620063
+status: 3
+tags: []
+user_id: ubuntu

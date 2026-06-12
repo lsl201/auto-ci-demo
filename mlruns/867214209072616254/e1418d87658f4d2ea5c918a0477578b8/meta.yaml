@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/e1418d87658f4d2ea5c918a0477578b8/artifacts
+end_time: 1781181631685
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: e1418d87658f4d2ea5c918a0477578b8
+run_name: useful-crane-474
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181630703
+status: 3
+tags: []
+user_id: ubuntu

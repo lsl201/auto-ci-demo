@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/773995501466085341/c2077afe43e9419a8a74cff94ab7cc0c/artifacts
+end_time: 1781170187893
+entry_point_name: ''
+experiment_id: '773995501466085341'
+lifecycle_stage: active
+run_id: c2077afe43e9419a8a74cff94ab7cc0c
+run_name: wistful-shoat-308
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781170175918
+status: 3
+tags: []
+user_id: ubuntu

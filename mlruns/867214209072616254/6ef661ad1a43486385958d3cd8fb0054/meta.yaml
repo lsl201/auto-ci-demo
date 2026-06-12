@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/6ef661ad1a43486385958d3cd8fb0054/artifacts
+end_time: 1781181890921
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 6ef661ad1a43486385958d3cd8fb0054
+run_name: wise-mink-294
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181889942
+status: 3
+tags: []
+user_id: ubuntu

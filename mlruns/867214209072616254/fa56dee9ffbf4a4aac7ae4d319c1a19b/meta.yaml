@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/fa56dee9ffbf4a4aac7ae4d319c1a19b/artifacts
+end_time: 1781181992669
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: fa56dee9ffbf4a4aac7ae4d319c1a19b
+run_name: melodic-turtle-550
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181991081
+status: 3
+tags: []
+user_id: ubuntu

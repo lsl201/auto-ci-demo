@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/4212b0f3688d4e5fb21f75dce169663e/artifacts
+end_time: 1781181998666
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 4212b0f3688d4e5fb21f75dce169663e
+run_name: righteous-stoat-448
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181997438
+status: 3
+tags: []
+user_id: ubuntu

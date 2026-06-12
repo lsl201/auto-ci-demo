@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/4008cdf9be0e4a70b6c25da556b5efad/artifacts
+end_time: 1781181892036
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 4008cdf9be0e4a70b6c25da556b5efad
+run_name: smiling-mule-190
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181891146
+status: 3
+tags: []
+user_id: ubuntu

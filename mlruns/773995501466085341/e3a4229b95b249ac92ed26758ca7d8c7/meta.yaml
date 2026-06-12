@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/773995501466085341/e3a4229b95b249ac92ed26758ca7d8c7/artifacts
+end_time: 1781170441997
+entry_point_name: ''
+experiment_id: '773995501466085341'
+lifecycle_stage: active
+run_id: e3a4229b95b249ac92ed26758ca7d8c7
+run_name: peaceful-chimp-166
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781170440545
+status: 3
+tags: []
+user_id: ubuntu

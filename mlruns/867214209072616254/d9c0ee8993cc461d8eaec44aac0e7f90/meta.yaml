@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/d9c0ee8993cc461d8eaec44aac0e7f90/artifacts
+end_time: 1781181994163
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: d9c0ee8993cc461d8eaec44aac0e7f90
+run_name: gregarious-vole-922
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181992938
+status: 3
+tags: []
+user_id: ubuntu

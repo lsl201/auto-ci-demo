@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/72b17a8a1b0246b7a2812d34a9dee59a/artifacts
+end_time: 1781160204365
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 72b17a8a1b0246b7a2812d34a9dee59a
+run_name: 对抗注入_卡顿频繁不推荐
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781160203431
+status: 4
+tags: []
+user_id: ubuntu

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/f72b4ff279c6403f9df60259cf168f38/artifacts
+end_time: 1781181900850
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: f72b4ff279c6403f9df60259cf168f38
+run_name: wise-donkey-491
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181899945
+status: 3
+tags: []
+user_id: ubuntu

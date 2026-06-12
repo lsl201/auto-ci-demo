@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/773995501466085341/d720f3754c5744e8b477d712e1ce0ab5/artifacts
+end_time: 1781181637415
+entry_point_name: ''
+experiment_id: '773995501466085341'
+lifecycle_stage: active
+run_id: d720f3754c5744e8b477d712e1ce0ab5
+run_name: gentle-squirrel-961
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181635395
+status: 3
+tags: []
+user_id: ubuntu

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/ad882630ef51463fbc5bea521429308a/artifacts
+end_time: 1781182008792
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: ad882630ef51463fbc5bea521429308a
+run_name: casual-zebra-91
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781182007603
+status: 3
+tags: []
+user_id: ubuntu

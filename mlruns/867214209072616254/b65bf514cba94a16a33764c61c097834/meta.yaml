@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/b65bf514cba94a16a33764c61c097834/artifacts
+end_time: 1781181614551
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: b65bf514cba94a16a33764c61c097834
+run_name: stylish-cat-343
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181613114
+status: 3
+tags: []
+user_id: ubuntu

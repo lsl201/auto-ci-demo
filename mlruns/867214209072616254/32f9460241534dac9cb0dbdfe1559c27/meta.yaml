@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/32f9460241534dac9cb0dbdfe1559c27/artifacts
+end_time: 1781181878180
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 32f9460241534dac9cb0dbdfe1559c27
+run_name: trusting-snail-584
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181876790
+status: 3
+tags: []
+user_id: ubuntu

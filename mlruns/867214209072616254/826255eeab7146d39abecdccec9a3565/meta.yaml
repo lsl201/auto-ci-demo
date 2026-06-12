@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/826255eeab7146d39abecdccec9a3565/artifacts
+end_time: 1781182014330
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 826255eeab7146d39abecdccec9a3565
+run_name: silent-duck-345
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781182013176
+status: 3
+tags: []
+user_id: ubuntu

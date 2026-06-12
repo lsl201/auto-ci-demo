@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/5b826cb1932f4c19b716d289018f77bf/artifacts
+end_time: 1781181889703
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 5b826cb1932f4c19b716d289018f77bf
+run_name: nosy-mule-921
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181888744
+status: 3
+tags: []
+user_id: ubuntu

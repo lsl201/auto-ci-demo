@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/8a2f1b33eca6404ba4fc7ee856ad64ee/artifacts
+end_time: 1781182005845
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 8a2f1b33eca6404ba4fc7ee856ad64ee
+run_name: bald-vole-468
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781182004767
+status: 3
+tags: []
+user_id: ubuntu

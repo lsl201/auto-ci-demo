@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/773995501466085341/3dfe806a9fdf4a5daf5013f9fb26ae8b/artifacts
+end_time: 1781182018505
+entry_point_name: ''
+experiment_id: '773995501466085341'
+lifecycle_stage: active
+run_id: 3dfe806a9fdf4a5daf5013f9fb26ae8b
+run_name: gifted-quail-393
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781182016021
+status: 3
+tags: []
+user_id: ubuntu

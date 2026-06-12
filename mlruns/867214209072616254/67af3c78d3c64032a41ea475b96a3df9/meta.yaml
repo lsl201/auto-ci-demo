@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/67af3c78d3c64032a41ea475b96a3df9/artifacts
+end_time: 1781181897464
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 67af3c78d3c64032a41ea475b96a3df9
+run_name: learned-bee-881
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181896600
+status: 3
+tags: []
+user_id: ubuntu

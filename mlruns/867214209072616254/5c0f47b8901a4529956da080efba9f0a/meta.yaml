@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/5c0f47b8901a4529956da080efba9f0a/artifacts
+end_time: 1781182007302
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 5c0f47b8901a4529956da080efba9f0a
+run_name: omniscient-cat-783
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781182006127
+status: 3
+tags: []
+user_id: ubuntu

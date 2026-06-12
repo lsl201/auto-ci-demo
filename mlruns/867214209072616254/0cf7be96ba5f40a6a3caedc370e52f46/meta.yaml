@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/0cf7be96ba5f40a6a3caedc370e52f46/artifacts
+end_time: 1781224535848
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 0cf7be96ba5f40a6a3caedc370e52f46
+run_name: 公平性测试_做工粗糙不好用
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781224535387
+status: 4
+tags: []
+user_id: ubuntu

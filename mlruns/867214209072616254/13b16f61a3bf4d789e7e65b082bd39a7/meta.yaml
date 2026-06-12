@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/13b16f61a3bf4d789e7e65b082bd39a7/artifacts
+end_time: 1781181987340
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 13b16f61a3bf4d789e7e65b082bd39a7
+run_name: amazing-newt-379
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181985594
+status: 3
+tags: []
+user_id: ubuntu

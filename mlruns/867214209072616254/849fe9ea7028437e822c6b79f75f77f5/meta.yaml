@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/849fe9ea7028437e822c6b79f75f77f5/artifacts
+end_time: 1781181884976
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 849fe9ea7028437e822c6b79f75f77f5
+run_name: shivering-cub-966
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181884043
+status: 3
+tags: []
+user_id: ubuntu

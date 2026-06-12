@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/d70932d9b385497184c4ad8f83a3258b/artifacts
+end_time: 1781181635153
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: d70932d9b385497184c4ad8f83a3258b
+run_name: overjoyed-toad-17
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181634267
+status: 3
+tags: []
+user_id: ubuntu

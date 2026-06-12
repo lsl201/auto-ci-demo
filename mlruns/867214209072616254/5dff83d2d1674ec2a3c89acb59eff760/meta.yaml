@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/5dff83d2d1674ec2a3c89acb59eff760/artifacts
+end_time: 1781181990809
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 5dff83d2d1674ec2a3c89acb59eff760
+run_name: aged-mole-371
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181989320
+status: 3
+tags: []
+user_id: ubuntu

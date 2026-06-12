@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/fc1007a7883c4a7da143c38b2393ac54/artifacts
+end_time: 1781181630436
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: fc1007a7883c4a7da143c38b2393ac54
+run_name: angry-chimp-101
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181629593
+status: 3
+tags: []
+user_id: ubuntu

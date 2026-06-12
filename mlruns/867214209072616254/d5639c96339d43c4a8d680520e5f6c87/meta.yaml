@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/d5639c96339d43c4a8d680520e5f6c87/artifacts
+end_time: 1781181899705
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: d5639c96339d43c4a8d680520e5f6c87
+run_name: puzzled-mole-397
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181898874
+status: 3
+tags: []
+user_id: ubuntu

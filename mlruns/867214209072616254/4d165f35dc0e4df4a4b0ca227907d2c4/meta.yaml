@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/4d165f35dc0e4df4a4b0ca227907d2c4/artifacts
+end_time: 1781224532507
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 4d165f35dc0e4df4a4b0ca227907d2c4
+run_name: 数据漂移测试_画面清晰体验不错
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781224531993
+status: 4
+tags: []
+user_id: ubuntu

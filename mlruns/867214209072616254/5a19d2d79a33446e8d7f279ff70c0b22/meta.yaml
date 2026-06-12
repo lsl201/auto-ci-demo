@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/5a19d2d79a33446e8d7f279ff70c0b22/artifacts
+end_time: 1781181618475
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 5a19d2d79a33446e8d7f279ff70c0b22
+run_name: able-grouse-711
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181617509
+status: 3
+tags: []
+user_id: ubuntu

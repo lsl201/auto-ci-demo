@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/9d78b0254ab2424d91278d4bb723f7d0/artifacts
+end_time: 1781181611503
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 9d78b0254ab2424d91278d4bb723f7d0
+run_name: ambitious-calf-0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781181610067
+status: 3
+tags: []
+user_id: ubuntu

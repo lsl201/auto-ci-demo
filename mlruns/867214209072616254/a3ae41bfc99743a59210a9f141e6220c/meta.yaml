@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/a3ae41bfc99743a59210a9f141e6220c/artifacts
+end_time: 1781227967672
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: a3ae41bfc99743a59210a9f141e6220c
+run_name: 脏输入测试_卡顿频繁不推荐
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781227967241
+status: 3
+tags: []
+user_id: ubuntu

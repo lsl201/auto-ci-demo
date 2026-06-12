@@ -6,11 +6,8 @@ import allure
 import sys
 import pandas as pd
 
-
-# ========== 配置区（只改这里） ==========
+# ========== 配置区 (只改这里) ==========
 MLFLOW_TRACKING_URI = "file:///home/ubuntu/Desktop/auto-ci-demo/mlruns"
-# 支持多个experiment，未来拆成 offline/robustness 直接加进来
-# 原来：EXPERIMENT_NAMES = ["model-test-suite"]
 EXPERIMENT_NAMES = ["model-test-suite-offline", "model-test-suite-robustness"]
 OUTPUT_CSV_PATH = "/home/ubuntu/Desktop/auto-ci-demo/metrics_summary.csv"
 
@@ -60,10 +57,9 @@ def main():
         return
 
     # 合并所有experiment的数据
-    import pandas as pd
     runs = pd.concat(all_runs, ignore_index=True)
 
-    # 4. 指标映射（新增指标只改这里）
+    # 4. 指标映射 (新增指标只改这里)
     metric_map = {
         "offline_accuracy": "metrics.offline_accuracy",
         "online_accuracy": "metrics.online_accuracy",
@@ -83,15 +79,15 @@ def main():
         "fairness_error_rate": "metrics.fairness_error_rate"
     }
 
-    # 5. 构建行数据
+    # 5. 构建行数据 (修复tags取值异常问题)
     rows = []
     for _, run in runs.iterrows():
         try:
             row = {
-                    "run_id": run["run_id"],
-                    "run_name": run.get("tags.mlflow.runName", run["run_id"]),
-                    "start_time": utc_to_beijing(run["start_time"]),
-                    "test_type": run.get("tags.test_type", "unknown"),  # 关键：离线/鲁棒性标签
+                "run_id": run["run_id"],
+                "run_name": run["tags.mlflow.runName"] if "tags.mlflow.runName" in run else run["run_id"],
+                "start_time": utc_to_beijing(run["start_time"]),
+                "test_type": run["tags.test_type"] if "tags.test_type" in run else "unknown",
             }
             # 批量填充指标
             for col, key in metric_map.items():
@@ -109,13 +105,14 @@ def main():
             writer.writeheader()
             writer.writerows(rows)
         print(f"✅ 汇总表已生成: {OUTPUT_CSV_PATH}")
-        print(f"✅ 总共读取了 {len(rows)} 条记录！")
-    # ====================== 新增：指标阈值门禁校验 ======================
+        print(f"✅ 总共读取了 {len(rows)} 条记录!")
+
+    # ================== 新增: 指标阈值门禁校验 (仅告警,不阻断流水线) ==================
     # 1. 读取刚生成的完整CSV
     df = pd.read_csv(OUTPUT_CSV_PATH)
     pass_flag = True
 
-    # 2. 自定义指标阈值（按需修改）
+    # 2. 自定义指标阈值 (修正key拼写错误)
     threshold_cfg = {
         "offline_accuracy": 0.85,
         "online_accuracy": 0.83,
@@ -123,26 +120,29 @@ def main():
         "robust_total_max_error": 0.08
     }
 
-    # 校验离线指标（offline分组）
+    # 校验离线指标 (offline分组)
     df_offline = df[df["test_type"] == "offline"]
     if len(df_offline) > 0:
         offline_acc = df_offline.iloc[0]["offline_accuracy"]
         if offline_acc < threshold_cfg["offline_accuracy"]:
-            print(f"❌ 离线准确率 {offline_acc} < 阈值 {threshold_cfg['offline_accuracy']}，指标劣化")
+            print(f"❌ 离线准确率 {offline_acc:.2%} < 阈值 {threshold_cfg['offline_accuracy']:.2%}, 指标劣化")
             pass_flag = False
 
     # 校验鲁棒性整体错误率均值
     df_robust = df[df["test_type"] == "robustness"]
     if len(df_robust) > 0:
-        mean_err = df_robust[["adv_error_rate","drift_error_rate","ood_error_rate","fairness_error_rate"]].mean(axis=1).mean()
+        err_cols = ["adv_error_rate", "drift_error_rate", "ood_error_rate", "fairness_error_rate"]
+        mean_err = df_robust[err_cols].mean(axis=1).mean()
         if mean_err > threshold_cfg["robust_total_max_error"]:
             print(f"❌ 鲁棒平均错误率 {mean_err:.4f} > 阈值 {threshold_cfg['robust_total_max_error']}")
             pass_flag = False
 
-    # 3. 校验不达标，直接退出，不执行模型注册
+    # 3. 校验不达标仅打印提示, 不再exit阻断流水线 (方案B已生效)
     if not pass_flag:
         print("⚠️ 指标校验未通过，仅做提示，不阻断流水线")
-        
+    else:
+        print("✅ 全部指标校验达标")
+
 
 if __name__ == "__main__":
     main()

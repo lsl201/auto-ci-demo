@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/175f0fec22d34436a0736a8067affb4a/artifacts
+end_time: 1781229921460
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 175f0fec22d34436a0736a8067affb4a
+run_name: 数据漂移测试_这款手机性价比很高
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781229920955
+status: 4
+tags: []
+user_id: ubuntu

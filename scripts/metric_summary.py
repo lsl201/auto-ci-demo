@@ -58,15 +58,28 @@ def main():
 
     # 合并所有experiment的数据
     runs = pd.concat(all_runs, ignore_index=True)
+    
+    # =========新增排序代码 开始=========
+    # 按run启动时间升序：最早执行的批次在上，最新批次在末尾
+    runs = runs.sort_values(by="start_time", ascending=True, ignore_index=True)
+    # =========新增排序代码 结束=========
 
     # 4. 指标映射 (新增指标只改这里)
     metric_map = {
+        # 原有全局指标不动
         "offline_accuracy": "metrics.offline_accuracy",
-        "online_accuracy": "metrics.online_accuracy",
-        "decay_accuracy": "metrics.decay_accuracy",
-        "offline_error_rate": "metrics.total_error_rate",
-        "offline_fpr": "metrics.false_positive_rate_FPR",
-        "offline_fnr": "metrics.false_negative_rate_FNR",
+        "total_error_rate": "metrics.total_error_rate",
+        "false_positive_rate_FPR": "metrics.false_positive_rate_FPR",
+        "false_negative_rate_FNR": "metrics.false_negative_rate_FNR",
+
+        # 新增正常子集
+        "offline_accuracy_normal": "metrics.offline_accuracy_normal",
+        "total_error_rate_normal": "metrics.total_error_rate_normal",
+        # 新增边界子集
+        "offline_accuracy_edge": "metrics.offline_accuracy_edge",
+        "total_error_rate_edge": "metrics.total_error_rate_edge",
+
+        # 剩下原有online、decay、鲁棒性指标不变
         "adv_robust_rate": "metrics.adv_robust_rate",
         "adv_error_rate": "metrics.adv_error_rate",
         "drift_robust_rate": "metrics.drift_robust_rate",

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/773995501466085341/8d212a5ee2eb4c3992f2ecd8248f6473/artifacts
+end_time: 1781494832384
+entry_point_name: ''
+experiment_id: '773995501466085341'
+lifecycle_stage: active
+run_id: 8d212a5ee2eb4c3992f2ecd8248f6473
+run_name: flawless-rook-566
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781494830395
+status: 3
+tags: []
+user_id: ubuntu

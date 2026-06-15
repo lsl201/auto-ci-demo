@@ -85,5 +85,5 @@ def test_type(request):
 
     # 设置MLflow实验
     mlflow.set_experiment(exp_name)
-
+    
     yield test_type

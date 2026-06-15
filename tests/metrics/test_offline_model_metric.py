@@ -8,6 +8,10 @@ import subprocess
 import os
 from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix
 from tests.common.model_loader import get_offline_model
+from datetime import datetime
+
+# 自动获取当天日期，格式：2026-06-15
+today_str = datetime.now().strftime("%Y-%m-%d")
 
 # ========== 常量 ==========
 ONLINE_API_URL = "http://127.0.0.1:8000/predict"
@@ -67,7 +71,9 @@ def test_offline_acc_err_rate(data_csv):
     with mlflow.start_run(
         run_name=f"数据集_{data_csv}_离线指标衰减验收",
         tags={
-        "data_version": data_csv  # 打标签标记数据集版本，汇总CSV可筛选
+        "data_version": data_csv,  # 打标签标记数据集版本，汇总CSV可筛选
+        "test_type": "offline",  # 直接在这里写死，或者根据场景动态设置
+        "batch_note": f"迭代{today_str} 业务指标回归"  # 自动拼接日期
         }
     ):
         try:

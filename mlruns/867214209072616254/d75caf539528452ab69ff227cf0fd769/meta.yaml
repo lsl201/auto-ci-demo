@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/d75caf539528452ab69ff227cf0fd769/artifacts
+end_time: 1781426251579
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: d75caf539528452ab69ff227cf0fd769
+run_name: 公平性测试_画面清晰体验不错
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781426249722
+status: 4
+tags: []
+user_id: ubuntu

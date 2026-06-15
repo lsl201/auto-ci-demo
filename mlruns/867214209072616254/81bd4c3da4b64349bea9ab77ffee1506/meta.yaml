@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/81bd4c3da4b64349bea9ab77ffee1506/artifacts
+end_time: 1781404729247
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 81bd4c3da4b64349bea9ab77ffee1506
+run_name: 脏输入测试_做工粗糙不好用
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781404728848
+status: 3
+tags: []
+user_id: ubuntu

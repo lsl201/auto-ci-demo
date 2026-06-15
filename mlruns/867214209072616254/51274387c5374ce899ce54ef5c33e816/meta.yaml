@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/867214209072616254/51274387c5374ce899ce54ef5c33e816/artifacts
+end_time: 1781404733621
+entry_point_name: ''
+experiment_id: '867214209072616254'
+lifecycle_stage: active
+run_id: 51274387c5374ce899ce54ef5c33e816
+run_name: OOD测试_做工粗糙不好用
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781404733227
+status: 4
+tags: []
+user_id: ubuntu

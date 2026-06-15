@@ -1,240 +1,335 @@
-run_id,run_name,start_time,test_type,offline_accuracy,total_error_rate,false_positive_rate_FPR,false_negative_rate_FNR,offline_accuracy_normal,total_error_rate_normal,offline_accuracy_edge,total_error_rate_edge,adv_robust_rate,adv_error_rate,drift_robust_rate,drift_error_rate,ood_error_rate,ood_wrong_count,noise_robust_accuracy,noise_robust_error_rate,fairness_pass_rate,fairness_error_rate
-09d3686f2b484059ab00340e8bf5b761,离线vs模拟线上_指标衰减验收,2026-06-11 14:37:49,offline,0.5,0.5,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-553224d18413471aa79d9264d8301b2b,对抗注入_这款手机性价比很高,2026-06-11 14:37:52,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-3a97157841c04bd994d71c7308dd0a25,对抗注入_做工粗糙不好用,2026-06-11 14:37:53,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-0fa166c85d2947c5aafb441be7cfa02b,对抗注入_画面清晰体验不错,2026-06-11 14:37:55,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-97fbdceb6c8b41c0abdf6b7de1e3af4d,对抗注入_卡顿频繁不推荐,2026-06-11 14:37:56,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-1ccdba0a5a92469a80ebbd5c6daaab48,数据漂移测试_这款手机性价比很高,2026-06-11 14:37:58,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-5253ddbd7de14c72a88551d216f4d40b,数据漂移测试_做工粗糙不好用,2026-06-11 14:37:59,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-304615a762ca4be887b98c378ea9e12e,数据漂移测试_画面清晰体验不错,2026-06-11 14:38:00,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-d2f9edf5a1ef4d27b16deac12310755e,数据漂移测试_卡顿频繁不推荐,2026-06-11 14:38:01,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-6450c293e5ba41f8a2681b35fc24c51c,公平性测试_这款手机性价比很高,2026-06-11 14:38:03,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-5841ff753939488ca1af802cd6b8e5f9,公平性测试_做工粗糙不好用,2026-06-11 14:38:04,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-727e383a6c12434886edd685ebbcc0dc,公平性测试_画面清晰体验不错,2026-06-11 14:38:05,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-ea21b61db7064b80b550c9b947ff0b03,公平性测试_卡顿频繁不推荐,2026-06-11 14:38:06,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-7d13ca60e7484062a2e89fb6a4781d76,脏输入测试_这款手机性价比很高,2026-06-11 14:38:07,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-41becd80d4ba4b7591adc8b06f2f0e43,脏输入测试_做工粗糙不好用,2026-06-11 14:38:08,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-34dbc99ae66342948258678072729531,脏输入测试_画面清晰体验不错,2026-06-11 14:38:10,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-457077bd4b6d4e7dba6ae171b3cb446e,脏输入测试_卡顿频繁不推荐,2026-06-11 14:38:11,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-c5b77b435fb042a395f0ddee16a67b73,OOD测试_这款手机性价比很高,2026-06-11 14:38:12,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-f9efcf62ffaa4734adda9a7428eb0d3d,OOD测试_做工粗糙不好用,2026-06-11 14:38:13,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-845e92dd74dd411ca31c73f577c94c74,OOD测试_画面清晰体验不错,2026-06-11 14:38:14,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-faf527b915544cae8ce5013eab9f2d76,OOD测试_卡顿频繁不推荐,2026-06-11 14:38:15,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-544a7340efc643f2adaeee37815ddb5e,离线vs模拟线上_指标衰减验收,2026-06-11 14:43:16,offline,0.5,0.5,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-13ab7fad64fe4695b9ac80ee136b725c,对抗注入_这款手机性价比很高,2026-06-11 14:43:18,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-03755c0ecdda443a96ee07a6e4204ec6,对抗注入_做工粗糙不好用,2026-06-11 14:43:19,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-a75d512dac5a4f10b3788dba45618fa9,对抗注入_画面清晰体验不错,2026-06-11 14:43:21,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-72b17a8a1b0246b7a2812d34a9dee59a,对抗注入_卡顿频繁不推荐,2026-06-11 14:43:23,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-15d7816497ff435e890347f248f9a544,数据漂移测试_这款手机性价比很高,2026-06-11 14:43:25,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-ee3cf315a9b14db68347147a0c0872a5,数据漂移测试_做工粗糙不好用,2026-06-11 14:43:26,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-448e958704d04200aecf87a668f066de,数据漂移测试_画面清晰体验不错,2026-06-11 14:43:28,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-538f00264694412997673cac8b0f3ac3,数据漂移测试_卡顿频繁不推荐,2026-06-11 14:43:29,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-29c89265dc564615ac9618472fb29d9a,公平性测试_这款手机性价比很高,2026-06-11 14:43:31,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-105a620096ff4aae972afe7d47fcd70a,公平性测试_做工粗糙不好用,2026-06-11 14:43:32,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-05461ff4d36944928b734a06ed2098f9,公平性测试_画面清晰体验不错,2026-06-11 14:43:33,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-0b5eb9d5c0de4e07ab64eb44501d4a64,公平性测试_卡顿频繁不推荐,2026-06-11 14:43:35,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-67b80ac2c81245a59cd2916f9c8f6950,脏输入测试_这款手机性价比很高,2026-06-11 14:43:36,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-89e62638314d46768268a77a83ef1ed7,脏输入测试_做工粗糙不好用,2026-06-11 14:43:37,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-e16c50d7b03b4fa587ec4406493c0765,脏输入测试_画面清晰体验不错,2026-06-11 14:43:39,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-02a12bb98a6e452989a5cc8d477934c3,脏输入测试_卡顿频繁不推荐,2026-06-11 14:43:40,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-763a9838f465419d8c5e4301d9509820,OOD测试_这款手机性价比很高,2026-06-11 14:43:41,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-0697348bbd89400099aa7e4042af0d92,OOD测试_做工粗糙不好用,2026-06-11 14:43:42,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-6ae9b1f260b6485e950699e4421de36d,OOD测试_画面清晰体验不错,2026-06-11 14:43:44,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-b3bab09a4a644cf28a8df90f020be7e9,OOD测试_卡顿频繁不推荐,2026-06-11 14:43:45,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-33027499eb684fe9ac7a90b3c22880f8,kindly-shoat-286,2026-06-11 17:24:49,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-c2077afe43e9419a8a74cff94ab7cc0c,wistful-shoat-308,2026-06-11 17:29:35,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-e3a4229b95b249ac92ed26758ca7d8c7,peaceful-chimp-166,2026-06-11 17:34:00,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-1a0063849b53409388718c121d6a7371,gentle-moth-643,2026-06-11 20:15:48,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-e92a84a3811b499e9bdf7d91f5b89b45,离线vs模拟线上_指标衰减验收,2026-06-11 20:15:48,offline,0.5,0.5,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-38c9e31724da4712ae66e242b281dde5,handsome-seal-846,2026-06-11 20:40:08,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-b70897a59d3446f98b333fd1bbcb58da,离线vs模拟线上_指标衰减验收,2026-06-11 20:40:08,offline,0.5,0.5,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-9d78b0254ab2424d91278d4bb723f7d0,ambitious-calf-0,2026-06-11 20:40:10,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-cce30032397a46a4b1c9a82c286d3e3d,对抗注入_这款手机性价比很高,2026-06-11 20:40:10,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-a6a8a92e3ffa494fa1fcc4258a1d90e7,grandiose-carp-699,2026-06-11 20:40:11,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-488c45f39546449597ace2bb13482d1a,对抗注入_做工粗糙不好用,2026-06-11 20:40:12,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-b65bf514cba94a16a33764c61c097834,stylish-cat-343,2026-06-11 20:40:13,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-308f9710a72a435b866aa980ea792371,对抗注入_画面清晰体验不错,2026-06-11 20:40:13,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-09c969c0a8f4413dbc5b9bb9fe6a2fea,welcoming-yak-847,2026-06-11 20:40:14,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-0cabf0e4e86742fe8742515113bcc5b7,对抗注入_卡顿频繁不推荐,2026-06-11 20:40:15,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-e284223bc23a4a3296af82a78d0a4b8c,delightful-snail-260,2026-06-11 20:40:16,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-f7c963c35bf440c691460942a34a06fd,数据漂移测试_这款手机性价比很高,2026-06-11 20:40:16,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-5a19d2d79a33446e8d7f279ff70c0b22,able-grouse-711,2026-06-11 20:40:17,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-0a6b4667bb6846e99a8f62e3b44135dd,数据漂移测试_做工粗糙不好用,2026-06-11 20:40:17,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-39e831f97bec4189bc28cd8b5569953b,merciful-conch-229,2026-06-11 20:40:18,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-1918a853843d436eb2a30a9ed09c01a2,数据漂移测试_画面清晰体验不错,2026-06-11 20:40:19,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-62e2304d6d2b4ebaa752bab94df5a7cb,monumental-skink-212,2026-06-11 20:40:20,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-f55b21fc090f481586d2aa666b0fabcb,数据漂移测试_卡顿频繁不推荐,2026-06-11 20:40:20,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-d0b51dae822f4823aad3cff139696a51,nosy-midge-329,2026-06-11 20:40:21,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-059f5be61e7a4a93a033b3707a7ed372,公平性测试_这款手机性价比很高,2026-06-11 20:40:21,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-1c0fb635b5594582a07e5ceaa1c84a8e,clean-squirrel-12,2026-06-11 20:40:22,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-2cbb8871deca47d387d3b489f82cc752,公平性测试_做工粗糙不好用,2026-06-11 20:40:22,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-2eed1bd0e8924bcd9b7587e73510f103,amazing-shrike-785,2026-06-11 20:40:23,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-d64c6567110c40148a9ba4bc52f9a098,公平性测试_画面清晰体验不错,2026-06-11 20:40:24,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-c51ba46f71a24812b0d3e80a3fe3654f,agreeable-wren-762,2026-06-11 20:40:24,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-8066f956a202473791cde0128d5477ad,公平性测试_卡顿频繁不推荐,2026-06-11 20:40:25,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-c4f2ff32888d444ead26f867af618ff9,ambitious-fawn-1000,2026-06-11 20:40:26,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-4edd7d01888f42578356de86c2a38060,脏输入测试_这款手机性价比很高,2026-06-11 20:40:26,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-885ef2d7728943edac3fd1aea046146f,upbeat-ox-803,2026-06-11 20:40:27,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-ef09faeb9e9b4a92b8a99826ffa2323b,脏输入测试_做工粗糙不好用,2026-06-11 20:40:27,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-87080441c0e4406399d57143f9f5c156,beautiful-zebra-56,2026-06-11 20:40:28,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-7638b3fe66fe43bca22047c8e1676e80,脏输入测试_画面清晰体验不错,2026-06-11 20:40:28,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-fc1007a7883c4a7da143c38b2393ac54,angry-chimp-101,2026-06-11 20:40:29,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-2ba55ffc4a9e4c298426291b624f6a40,脏输入测试_卡顿频繁不推荐,2026-06-11 20:40:30,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-e1418d87658f4d2ea5c918a0477578b8,useful-crane-474,2026-06-11 20:40:30,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-2fbf453fd3ea472fa67b9781ed03e37f,OOD测试_这款手机性价比很高,2026-06-11 20:40:31,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-ac94f801f8d340cb801caa1c015cced0,nervous-stag-195,2026-06-11 20:40:31,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-71b992df66a64b33b4bc7413acd8f595,OOD测试_做工粗糙不好用,2026-06-11 20:40:32,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-f9ceadaf7ad0473390a1d6455201187d,gentle-bass-263,2026-06-11 20:40:33,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-5f716dd3e0424427bebb16c5d40ddb63,OOD测试_画面清晰体验不错,2026-06-11 20:40:33,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-d70932d9b385497184c4ad8f83a3258b,overjoyed-toad-17,2026-06-11 20:40:34,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-6b06a2d4fda04a9ea79b12148624cf54,OOD测试_卡顿频繁不推荐,2026-06-11 20:40:34,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-d720f3754c5744e8b477d712e1ce0ab5,gentle-squirrel-961,2026-06-11 20:40:35,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-32f9460241534dac9cb0dbdfe1559c27,trusting-snail-584,2026-06-11 20:44:36,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-892cf3d07bde42da88a2df92061f5a3e,对抗注入_这款手机性价比很高,2026-06-11 20:44:37,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-5bb8e56f78f74994bf9b4212dc5317fb,thoughtful-bat-847,2026-06-11 20:44:38,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-6b5d6d2c4b2244b3aec68f412e28bfaf,对抗注入_做工粗糙不好用,2026-06-11 20:44:38,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-b6eb1a89e24e45a48fb84127bee3d83d,stately-jay-84,2026-06-11 20:44:39,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-691b3505fb8c4359ab6439569af53d5f,对抗注入_画面清晰体验不错,2026-06-11 20:44:40,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-1a25f02ab46548a4906d59df274efc40,popular-tern-836,2026-06-11 20:44:41,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-189ebb6c48214eb7a6d73256a27a045e,对抗注入_卡顿频繁不推荐,2026-06-11 20:44:41,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-9c0c965bd4384c3e8360fab987c47700,abrasive-fawn-301,2026-06-11 20:44:42,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-e87c648a4b6d48c3a2981bbf6691f94f,数据漂移测试_这款手机性价比很高,2026-06-11 20:44:43,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-849fe9ea7028437e822c6b79f75f77f5,shivering-cub-966,2026-06-11 20:44:44,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-b3b392a9000b4c73899615a9cda01065,数据漂移测试_做工粗糙不好用,2026-06-11 20:44:44,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-0c0ef12acf434b0dad350b9b995291d2,merciful-lark-364,2026-06-11 20:44:45,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-7db1795f5ae74aec88856fd1850131bd,数据漂移测试_画面清晰体验不错,2026-06-11 20:44:45,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-d6e7607e094946f2be7c7a7359b94bc5,kindly-trout-254,2026-06-11 20:44:46,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-eab4c292139b4b32904f9562952b801c,数据漂移测试_卡顿频繁不推荐,2026-06-11 20:44:46,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-3e3e83ae802d4ea2bd09253df5543f4a,youthful-fowl-992,2026-06-11 20:44:47,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-067dee68e6094e899510f03ef3896a38,公平性测试_这款手机性价比很高,2026-06-11 20:44:47,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-5b826cb1932f4c19b716d289018f77bf,nosy-mule-921,2026-06-11 20:44:48,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-2d940ad96c1a49259a85ba7c2fdea041,公平性测试_做工粗糙不好用,2026-06-11 20:44:49,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-6ef661ad1a43486385958d3cd8fb0054,wise-mink-294,2026-06-11 20:44:49,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-4cd14e8e8ec9469fb416ea093973fb30,公平性测试_画面清晰体验不错,2026-06-11 20:44:50,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-4008cdf9be0e4a70b6c25da556b5efad,smiling-mule-190,2026-06-11 20:44:51,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-f33b8b3e78694056919812017079c1b5,公平性测试_卡顿频繁不推荐,2026-06-11 20:44:51,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-653abe912dd847ad82433f0a447abbc7,capricious-ray-450,2026-06-11 20:44:52,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-c19d401e823e46b29b7e2d092545bd5c,脏输入测试_这款手机性价比很高,2026-06-11 20:44:52,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-2246a670ccae417382a35e7222881e86,dapper-shark-889,2026-06-11 20:44:53,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-36c380de8f93450485a30bcb67d87d57,脏输入测试_做工粗糙不好用,2026-06-11 20:44:53,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-1f74fdfa484047ccb6ef755eafdb9717,caring-shoat-20,2026-06-11 20:44:54,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-54c43ee2386749f3a14beea545deb310,脏输入测试_画面清晰体验不错,2026-06-11 20:44:54,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-4877087b43d0454b940842e8f7e35b84,nervous-newt-749,2026-06-11 20:44:55,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-0864ae4e73894dbc8487bf6936b96df2,脏输入测试_卡顿频繁不推荐,2026-06-11 20:44:55,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-67af3c78d3c64032a41ea475b96a3df9,learned-bee-881,2026-06-11 20:44:56,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-a17608810cfd4f4eae89f05705d1f4cd,OOD测试_这款手机性价比很高,2026-06-11 20:44:57,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-7365df94fb394fe18101bf0449b69ae0,nimble-bee-806,2026-06-11 20:44:57,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-b1985390f5ec4f659adb2202b1f7562e,OOD测试_做工粗糙不好用,2026-06-11 20:44:58,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-d5639c96339d43c4a8d680520e5f6c87,puzzled-mole-397,2026-06-11 20:44:58,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-bd092a667adc47d3b11ff1a4be11e86c,OOD测试_画面清晰体验不错,2026-06-11 20:44:59,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-f72b4ff279c6403f9df60259cf168f38,wise-donkey-491,2026-06-11 20:44:59,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-3e491a9fbb4d43e7910cf6fc6e89b059,OOD测试_卡顿频繁不推荐,2026-06-11 20:45:00,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-8c1f8b252e174e86b19b0a74aababaa3,gentle-hare-171,2026-06-11 20:46:24,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-493d40f876024e7da31a2ea11fe0a1c3,离线vs模拟线上_指标衰减验收,2026-06-11 20:46:24,offline,0.5,0.5,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-13b16f61a3bf4d789e7e65b082bd39a7,amazing-newt-379,2026-06-11 20:46:25,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-0d965a424fc6454a9ed503f2435b53a1,对抗注入_这款手机性价比很高,2026-06-11 20:46:26,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-d84f8fbd20e74538901e0218a71f9ffa,fearless-dolphin-759,2026-06-11 20:46:27,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-a68ea27966f54c078c53b6c728693ee0,对抗注入_做工粗糙不好用,2026-06-11 20:46:28,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-5dff83d2d1674ec2a3c89acb59eff760,aged-mole-371,2026-06-11 20:46:29,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-7e832b36978541e8b668bb2911c640fc,对抗注入_画面清晰体验不错,2026-06-11 20:46:29,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-fa56dee9ffbf4a4aac7ae4d319c1a19b,melodic-turtle-550,2026-06-11 20:46:31,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-e4d2a7a0b47c4d509f7f3123c55a8fc4,对抗注入_卡顿频繁不推荐,2026-06-11 20:46:31,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-d9c0ee8993cc461d8eaec44aac0e7f90,gregarious-vole-922,2026-06-11 20:46:32,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-cbd62f09d1fb47fd8216790f1b2d10aa,数据漂移测试_这款手机性价比很高,2026-06-11 20:46:33,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-eb3bfdaf8e39415a823cb996327b1bbe,rumbling-doe-136,2026-06-11 20:46:34,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-bd3aa78140994a2a9165bcdb2a23680c,数据漂移测试_做工粗糙不好用,2026-06-11 20:46:34,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-ac83589e14be4118aaea6715a6dfddad,fearless-hare-811,2026-06-11 20:46:35,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-cf3412d93bd54269992f932ca239f787,数据漂移测试_画面清晰体验不错,2026-06-11 20:46:36,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-4212b0f3688d4e5fb21f75dce169663e,righteous-stoat-448,2026-06-11 20:46:37,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-c2dc94d3727146b2b24f4939508ce19b,数据漂移测试_卡顿频繁不推荐,2026-06-11 20:46:38,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-71d84c3f933b45f995a09a4b8afce94e,honorable-ray-130,2026-06-11 20:46:38,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-d16a1bb4019245ac997481367d74e9c5,公平性测试_这款手机性价比很高,2026-06-11 20:46:39,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-58917178eea6495b9ca12ba351f417bc,classy-colt-739,2026-06-11 20:46:40,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-c6c54a5f72ba43849b91e060e2516335,公平性测试_做工粗糙不好用,2026-06-11 20:46:40,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-a8411bdb088b42a38b50d13eccabd90f,zealous-zebra-999,2026-06-11 20:46:41,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-638cb0049e914296bd44771a9735e8ca,公平性测试_画面清晰体验不错,2026-06-11 20:46:42,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-97e03ad982704ce6b5847668975cc03c,respected-swan-507,2026-06-11 20:46:43,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-87a3b97666ce410c9c517593ea346c98,公平性测试_卡顿频繁不推荐,2026-06-11 20:46:43,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-8a2f1b33eca6404ba4fc7ee856ad64ee,bald-vole-468,2026-06-11 20:46:44,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-eff95e1c2b0a40368c97521a8599d305,脏输入测试_这款手机性价比很高,2026-06-11 20:46:45,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-5c0f47b8901a4529956da080efba9f0a,omniscient-cat-783,2026-06-11 20:46:46,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-09b88d98041f44a09371e721b0bf3fa0,脏输入测试_做工粗糙不好用,2026-06-11 20:46:46,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-ad882630ef51463fbc5bea521429308a,casual-zebra-91,2026-06-11 20:46:47,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-4f397c8d247c4594901ecf34e6c89828,脏输入测试_画面清晰体验不错,2026-06-11 20:46:48,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-1342617c96b4448bb208066c1d051272,classy-whale-236,2026-06-11 20:46:49,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-3bd979a0eb9242518788ce9d5d81ecf2,脏输入测试_卡顿频繁不推荐,2026-06-11 20:46:49,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-e21d0cf980dd49299a790845d56f88bb,puzzled-penguin-803,2026-06-11 20:46:50,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-33206ff624d044718231dfa91c50b577,OOD测试_这款手机性价比很高,2026-06-11 20:46:50,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-f04b65e5d80542d5b8ca71ba8d2c3fda,funny-wasp-635,2026-06-11 20:46:51,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-ffec2ecdaf664efda7573f702f332f07,OOD测试_做工粗糙不好用,2026-06-11 20:46:52,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-826255eeab7146d39abecdccec9a3565,silent-duck-345,2026-06-11 20:46:53,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-19ff10895b4042c9ba88c247eecb7c2c,OOD测试_画面清晰体验不错,2026-06-11 20:46:53,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-a8053f7b37a648f5b13f29e531711cd9,thoughtful-kite-550,2026-06-11 20:46:54,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-4dd49f6eaa10419380e20cbbf617794f,OOD测试_卡顿频繁不推荐,2026-06-11 20:46:55,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-3dfe806a9fdf4a5daf5013f9fb26ae8b,gifted-quail-393,2026-06-11 20:46:56,,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-a6f777fe60f7435b83697118af1dfe12,离线vs模拟线上_指标衰减验收,2026-06-12 08:35:21,offline,0.5,0.5,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-efb79e83bbb4420dbb56cfafbbb4b041,对抗注入_这款手机性价比很高,2026-06-12 08:35:24,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-75f922fe953c449fa90537634e5c3e71,对抗注入_做工粗糙不好用,2026-06-12 08:35:25,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-a4f6db90d2794f17b25b9da76f244d96,对抗注入_画面清晰体验不错,2026-06-12 08:35:26,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-7a35f156e6bb47e699191c892cdd2be4,对抗注入_卡顿频繁不推荐,2026-06-12 08:35:28,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-c3df2b60ca0841f5929e87b2cf7d46ce,数据漂移测试_这款手机性价比很高,2026-06-12 08:35:29,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-28ec9a492e4e4d809fe96c1d31b21600,数据漂移测试_做工粗糙不好用,2026-06-12 08:35:30,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-4d165f35dc0e4df4a4b0ca227907d2c4,数据漂移测试_画面清晰体验不错,2026-06-12 08:35:31,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-1d697fa8cfec4f669503055c26346fb7,数据漂移测试_卡顿频繁不推荐,2026-06-12 08:35:33,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-e9fc5a9118ba407891af69b967bbf2f7,公平性测试_这款手机性价比很高,2026-06-12 08:35:34,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-0cf7be96ba5f40a6a3caedc370e52f46,公平性测试_做工粗糙不好用,2026-06-12 08:35:35,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-e0ac92e4aa0d4189b054acd6b9439737,公平性测试_画面清晰体验不错,2026-06-12 08:35:36,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-14969c3b978d44c08fd31ac0a3feed6a,公平性测试_卡顿频繁不推荐,2026-06-12 08:35:37,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-ca6f3fff1b6b4159805e75f817cc4819,脏输入测试_这款手机性价比很高,2026-06-12 08:35:38,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-ff3ff95da19a4f14beb9b8257bf289af,脏输入测试_做工粗糙不好用,2026-06-12 08:35:39,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-866c182af90f4325acbface891ae0ce1,脏输入测试_画面清晰体验不错,2026-06-12 08:35:40,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-db956c349ac04c64bac44d8d3f751a08,脏输入测试_卡顿频繁不推荐,2026-06-12 08:35:42,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-9ff1ed9fd54c47fdb580ceeb002c73e7,OOD测试_这款手机性价比很高,2026-06-12 08:35:43,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-a05203462fa5481e8858405e2001c4eb,OOD测试_做工粗糙不好用,2026-06-12 08:35:44,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-f3096ccd3f254200ae7c1cb3f2292195,OOD测试_画面清晰体验不错,2026-06-12 08:35:45,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-8b1f2cfb1d944cf8a450e5f1de788279,OOD测试_卡顿频繁不推荐,2026-06-12 08:35:46,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-640fcc53f6954c35921481c095495f9a,离线vs模拟线上_指标衰减验收,2026-06-12 08:41:38,offline,0.5,0.5,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-2f790c446ee94b458e1c0880d0dfa2ea,离线vs模拟线上_指标衰减验收,2026-06-12 09:32:22,offline,0.5,0.5,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-d15aab293d934a5cb3013942cba70962,对抗注入_这款手机性价比很高,2026-06-12 09:32:26,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-b7983aada10149a4ac970ab02fa9f28f,对抗注入_做工粗糙不好用,2026-06-12 09:32:28,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-4e16599581df4ff1ba6412661fa61cae,对抗注入_画面清晰体验不错,2026-06-12 09:32:29,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-f8af16d735ef4f89aba67bfa0063db39,对抗注入_卡顿频繁不推荐,2026-06-12 09:32:31,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-85a40878ffab4b0ea010bc2ce32095a5,数据漂移测试_这款手机性价比很高,2026-06-12 09:32:32,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-52ed2045f6b14add980358776db2cc64,数据漂移测试_做工粗糙不好用,2026-06-12 09:32:34,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-3da8201970a44301a4449b15fd4172f4,数据漂移测试_画面清晰体验不错,2026-06-12 09:32:35,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-6591279f86a942f2867a8107e85aa2be,数据漂移测试_卡顿频繁不推荐,2026-06-12 09:32:36,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-f588b96f3d964a8896c2eed434aed0a5,公平性测试_这款手机性价比很高,2026-06-12 09:32:38,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-4913306c30054221b95fe9bbda1079d7,公平性测试_做工粗糙不好用,2026-06-12 09:32:39,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-588804755a9c41278a3f5aa91266fbfc,公平性测试_画面清晰体验不错,2026-06-12 09:32:40,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-085bb1bc80ee469c924b94648cc8eb38,公平性测试_卡顿频繁不推荐,2026-06-12 09:32:42,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-0d50ca5763a84e2fa02eefe5cc81d86c,脏输入测试_这款手机性价比很高,2026-06-12 09:32:43,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-dd113a99d8034779b9fbd12a53fbdac5,脏输入测试_做工粗糙不好用,2026-06-12 09:32:44,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-b60f84b82f7b45c684f1cfda4cc35a83,脏输入测试_画面清晰体验不错,2026-06-12 09:32:45,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-a3ae41bfc99743a59210a9f141e6220c,脏输入测试_卡顿频繁不推荐,2026-06-12 09:32:47,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-cc6b1b9642134446b44646d2e826ab55,OOD测试_这款手机性价比很高,2026-06-12 09:32:48,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-29eea7123d924d61814bad62c8578e2c,OOD测试_做工粗糙不好用,2026-06-12 09:32:49,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-b592c85ca18346b3bd35bec757b5cc89,OOD测试_画面清晰体验不错,2026-06-12 09:32:50,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-fef103571b5146afbc043c4f48881d8c,OOD测试_卡顿频繁不推荐,2026-06-12 09:32:52,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-d7a2a5865f8d425a9ccf7b07b54fa65a,离线vs模拟线上_指标衰减验收,2026-06-12 10:05:12,offline,0.5,0.5,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-a6eb34725f7041368e3c9901700a2751,对抗注入_这款手机性价比很高,2026-06-12 10:05:15,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-909c245b8ea64130bf41bbf8cf7c0991,对抗注入_做工粗糙不好用,2026-06-12 10:05:16,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-a6c426b1ba654c99b75d92482dc08168,对抗注入_画面清晰体验不错,2026-06-12 10:05:18,robustness,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0,nan,nan,nan,nan,nan,nan,nan,nan
-0e4ea095ecf7443d8bac509cf69c0977,对抗注入_卡顿频繁不推荐,2026-06-12 10:05:19,robustness,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0,nan,nan,nan,nan,nan,nan,nan,nan
-175f0fec22d34436a0736a8067affb4a,数据漂移测试_这款手机性价比很高,2026-06-12 10:05:20,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-a7f39424cbe14d908a33232290ed4f09,数据漂移测试_做工粗糙不好用,2026-06-12 10:05:22,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-1b5b2954cd34428985a3667bb2ffa059,数据漂移测试_画面清晰体验不错,2026-06-12 10:05:23,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan,nan,nan,nan,nan
-d95cb9ae750d454c9d6ca385f51d7b86,数据漂移测试_卡顿频繁不推荐,2026-06-12 10:05:24,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan,nan,nan,nan,nan
-b9c07527675f41e09a48b3460d1a1328,公平性测试_这款手机性价比很高,2026-06-12 10:05:25,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-07435418df3d4347b4ed963824148d5e,公平性测试_做工粗糙不好用,2026-06-12 10:05:26,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-04ad15c6e24443ca9c30a5d8bec70229,公平性测试_画面清晰体验不错,2026-06-12 10:05:28,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,0.0
-dbce66920a3e4120bafbb7fa08aabffd,公平性测试_卡顿频繁不推荐,2026-06-12 10:05:29,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,1.0
-2641ac6f4c914e8eb67cedbb01054cbe,脏输入测试_这款手机性价比很高,2026-06-12 10:05:30,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-dc74e412271142069f77763aeefd0961,脏输入测试_做工粗糙不好用,2026-06-12 10:05:31,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-1475dbe7154b4f878589e4c6e9684479,脏输入测试_画面清晰体验不错,2026-06-12 10:05:32,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.5714,0.4286,nan,nan
-4fbfe4b1fa0c482ba8858a37953ef47e,脏输入测试_卡顿频繁不推荐,2026-06-12 10:05:33,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.4286,0.5714,nan,nan
-904b777d8f6545e0893d51d9b3ed40eb,OOD测试_这款手机性价比很高,2026-06-12 10:05:34,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-f651ba06051346aa99fd073458f1dbe1,OOD测试_做工粗糙不好用,2026-06-12 10:05:35,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-4a507025dd81418a8c8d1ad497b28ec2,OOD测试_画面清晰体验不错,2026-06-12 10:05:37,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-4859f484f304403d8026c48feff6909f,OOD测试_卡顿频繁不推荐,2026-06-12 10:05:38,robustness,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,1.0,7.0,nan,nan,nan,nan
-d69f80cb529b4b46a091b26264fe0475,离线vs模拟线上_指标衰减验收,2026-06-12 15:32:14,offline,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
-fed6a6ae1d924c76821a46b5b966121c,离线vs模拟线上_指标衰减验收,2026-06-12 15:42:49,offline,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan
+﻿run_id,run_name,start_time,test_type,offline_accuracy,total_error_rate,false_positive_rate_FPR,false_negative_rate_FNR,offline_accuracy_normal,total_error_rate_normal,offline_accuracy_edge,total_error_rate_edge,adv_robust_rate,adv_error_rate,drift_robust_rate,drift_error_rate,ood_error_rate,ood_wrong_count,noise_robust_accuracy,noise_robust_error_rate,fairness_pass_rate,fairness_error_rate,是否达标,超限详情
+09d3686f2b484059ab00340e8bf5b761,离线vs模拟线上_指标衰减验收,,offline,0.5,0.5,1.0,0.0,,,,,,,,,,,,,,,不达标,离线准确率50.00%<85.00%
+553224d18413471aa79d9264d8301b2b,对抗注入_这款手机性价比很高,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+3a97157841c04bd994d71c7308dd0a25,对抗注入_做工粗糙不好用,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+0fa166c85d2947c5aafb441be7cfa02b,对抗注入_画面清晰体验不错,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+97fbdceb6c8b41c0abdf6b7de1e3af4d,对抗注入_卡顿频繁不推荐,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+1ccdba0a5a92469a80ebbd5c6daaab48,数据漂移测试_这款手机性价比很高,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+5253ddbd7de14c72a88551d216f4d40b,数据漂移测试_做工粗糙不好用,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+304615a762ca4be887b98c378ea9e12e,数据漂移测试_画面清晰体验不错,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+d2f9edf5a1ef4d27b16deac12310755e,数据漂移测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+6450c293e5ba41f8a2681b35fc24c51c,公平性测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+5841ff753939488ca1af802cd6b8e5f9,公平性测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+727e383a6c12434886edd685ebbcc0dc,公平性测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+ea21b61db7064b80b550c9b947ff0b03,公平性测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+7d13ca60e7484062a2e89fb6a4781d76,脏输入测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+41becd80d4ba4b7591adc8b06f2f0e43,脏输入测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+34dbc99ae66342948258678072729531,脏输入测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+457077bd4b6d4e7dba6ae171b3cb446e,脏输入测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+c5b77b435fb042a395f0ddee16a67b73,OOD测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+f9efcf62ffaa4734adda9a7428eb0d3d,OOD测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+845e92dd74dd411ca31c73f577c94c74,OOD测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+faf527b915544cae8ce5013eab9f2d76,OOD测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+544a7340efc643f2adaeee37815ddb5e,离线vs模拟线上_指标衰减验收,,offline,0.5,0.5,1.0,0.0,,,,,,,,,,,,,,,不达标,离线准确率50.00%<85.00%
+13ab7fad64fe4695b9ac80ee136b725c,对抗注入_这款手机性价比很高,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+03755c0ecdda443a96ee07a6e4204ec6,对抗注入_做工粗糙不好用,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+a75d512dac5a4f10b3788dba45618fa9,对抗注入_画面清晰体验不错,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+72b17a8a1b0246b7a2812d34a9dee59a,对抗注入_卡顿频繁不推荐,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+15d7816497ff435e890347f248f9a544,数据漂移测试_这款手机性价比很高,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+ee3cf315a9b14db68347147a0c0872a5,数据漂移测试_做工粗糙不好用,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+448e958704d04200aecf87a668f066de,数据漂移测试_画面清晰体验不错,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+538f00264694412997673cac8b0f3ac3,数据漂移测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+29c89265dc564615ac9618472fb29d9a,公平性测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+105a620096ff4aae972afe7d47fcd70a,公平性测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+05461ff4d36944928b734a06ed2098f9,公平性测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+0b5eb9d5c0de4e07ab64eb44501d4a64,公平性测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+67b80ac2c81245a59cd2916f9c8f6950,脏输入测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+89e62638314d46768268a77a83ef1ed7,脏输入测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+e16c50d7b03b4fa587ec4406493c0765,脏输入测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+02a12bb98a6e452989a5cc8d477934c3,脏输入测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+763a9838f465419d8c5e4301d9509820,OOD测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+0697348bbd89400099aa7e4042af0d92,OOD测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+6ae9b1f260b6485e950699e4421de36d,OOD测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+b3bab09a4a644cf28a8df90f020be7e9,OOD测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+33027499eb684fe9ac7a90b3c22880f8,kindly-shoat-286,,,,,,,,,,,,,,,,,,,,,达标,
+c2077afe43e9419a8a74cff94ab7cc0c,wistful-shoat-308,,,,,,,,,,,,,,,,,,,,,达标,
+e3a4229b95b249ac92ed26758ca7d8c7,peaceful-chimp-166,,,,,,,,,,,,,,,,,,,,,达标,
+1a0063849b53409388718c121d6a7371,gentle-moth-643,,,,,,,,,,,,,,,,,,,,,达标,
+e92a84a3811b499e9bdf7d91f5b89b45,离线vs模拟线上_指标衰减验收,,offline,0.5,0.5,1.0,0.0,,,,,,,,,,,,,,,不达标,离线准确率50.00%<85.00%
+38c9e31724da4712ae66e242b281dde5,handsome-seal-846,,,,,,,,,,,,,,,,,,,,,达标,
+b70897a59d3446f98b333fd1bbcb58da,离线vs模拟线上_指标衰减验收,,offline,0.5,0.5,1.0,0.0,,,,,,,,,,,,,,,不达标,离线准确率50.00%<85.00%
+9d78b0254ab2424d91278d4bb723f7d0,ambitious-calf-0,,,,,,,,,,,,,,,,,,,,,达标,
+cce30032397a46a4b1c9a82c286d3e3d,对抗注入_这款手机性价比很高,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+a6a8a92e3ffa494fa1fcc4258a1d90e7,grandiose-carp-699,,,,,,,,,,,,,,,,,,,,,达标,
+488c45f39546449597ace2bb13482d1a,对抗注入_做工粗糙不好用,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+b65bf514cba94a16a33764c61c097834,stylish-cat-343,,,,,,,,,,,,,,,,,,,,,达标,
+308f9710a72a435b866aa980ea792371,对抗注入_画面清晰体验不错,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+09c969c0a8f4413dbc5b9bb9fe6a2fea,welcoming-yak-847,,,,,,,,,,,,,,,,,,,,,达标,
+0cabf0e4e86742fe8742515113bcc5b7,对抗注入_卡顿频繁不推荐,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+e284223bc23a4a3296af82a78d0a4b8c,delightful-snail-260,,,,,,,,,,,,,,,,,,,,,达标,
+f7c963c35bf440c691460942a34a06fd,数据漂移测试_这款手机性价比很高,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+5a19d2d79a33446e8d7f279ff70c0b22,able-grouse-711,,,,,,,,,,,,,,,,,,,,,达标,
+0a6b4667bb6846e99a8f62e3b44135dd,数据漂移测试_做工粗糙不好用,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+39e831f97bec4189bc28cd8b5569953b,merciful-conch-229,,,,,,,,,,,,,,,,,,,,,达标,
+1918a853843d436eb2a30a9ed09c01a2,数据漂移测试_画面清晰体验不错,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+62e2304d6d2b4ebaa752bab94df5a7cb,monumental-skink-212,,,,,,,,,,,,,,,,,,,,,达标,
+f55b21fc090f481586d2aa666b0fabcb,数据漂移测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+d0b51dae822f4823aad3cff139696a51,nosy-midge-329,,,,,,,,,,,,,,,,,,,,,达标,
+059f5be61e7a4a93a033b3707a7ed372,公平性测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+1c0fb635b5594582a07e5ceaa1c84a8e,clean-squirrel-12,,,,,,,,,,,,,,,,,,,,,达标,
+2cbb8871deca47d387d3b489f82cc752,公平性测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+2eed1bd0e8924bcd9b7587e73510f103,amazing-shrike-785,,,,,,,,,,,,,,,,,,,,,达标,
+d64c6567110c40148a9ba4bc52f9a098,公平性测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+c51ba46f71a24812b0d3e80a3fe3654f,agreeable-wren-762,,,,,,,,,,,,,,,,,,,,,达标,
+8066f956a202473791cde0128d5477ad,公平性测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+c4f2ff32888d444ead26f867af618ff9,ambitious-fawn-1000,,,,,,,,,,,,,,,,,,,,,达标,
+4edd7d01888f42578356de86c2a38060,脏输入测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+885ef2d7728943edac3fd1aea046146f,upbeat-ox-803,,,,,,,,,,,,,,,,,,,,,达标,
+ef09faeb9e9b4a92b8a99826ffa2323b,脏输入测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+87080441c0e4406399d57143f9f5c156,beautiful-zebra-56,,,,,,,,,,,,,,,,,,,,,达标,
+7638b3fe66fe43bca22047c8e1676e80,脏输入测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+fc1007a7883c4a7da143c38b2393ac54,angry-chimp-101,,,,,,,,,,,,,,,,,,,,,达标,
+2ba55ffc4a9e4c298426291b624f6a40,脏输入测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+e1418d87658f4d2ea5c918a0477578b8,useful-crane-474,,,,,,,,,,,,,,,,,,,,,达标,
+2fbf453fd3ea472fa67b9781ed03e37f,OOD测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+ac94f801f8d340cb801caa1c015cced0,nervous-stag-195,,,,,,,,,,,,,,,,,,,,,达标,
+71b992df66a64b33b4bc7413acd8f595,OOD测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+f9ceadaf7ad0473390a1d6455201187d,gentle-bass-263,,,,,,,,,,,,,,,,,,,,,达标,
+5f716dd3e0424427bebb16c5d40ddb63,OOD测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+d70932d9b385497184c4ad8f83a3258b,overjoyed-toad-17,,,,,,,,,,,,,,,,,,,,,达标,
+6b06a2d4fda04a9ea79b12148624cf54,OOD测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+d720f3754c5744e8b477d712e1ce0ab5,gentle-squirrel-961,,,,,,,,,,,,,,,,,,,,,达标,
+32f9460241534dac9cb0dbdfe1559c27,trusting-snail-584,,,,,,,,,,,,,,,,,,,,,达标,
+892cf3d07bde42da88a2df92061f5a3e,对抗注入_这款手机性价比很高,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+5bb8e56f78f74994bf9b4212dc5317fb,thoughtful-bat-847,,,,,,,,,,,,,,,,,,,,,达标,
+6b5d6d2c4b2244b3aec68f412e28bfaf,对抗注入_做工粗糙不好用,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+b6eb1a89e24e45a48fb84127bee3d83d,stately-jay-84,,,,,,,,,,,,,,,,,,,,,达标,
+691b3505fb8c4359ab6439569af53d5f,对抗注入_画面清晰体验不错,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+1a25f02ab46548a4906d59df274efc40,popular-tern-836,,,,,,,,,,,,,,,,,,,,,达标,
+189ebb6c48214eb7a6d73256a27a045e,对抗注入_卡顿频繁不推荐,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+9c0c965bd4384c3e8360fab987c47700,abrasive-fawn-301,,,,,,,,,,,,,,,,,,,,,达标,
+e87c648a4b6d48c3a2981bbf6691f94f,数据漂移测试_这款手机性价比很高,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+849fe9ea7028437e822c6b79f75f77f5,shivering-cub-966,,,,,,,,,,,,,,,,,,,,,达标,
+b3b392a9000b4c73899615a9cda01065,数据漂移测试_做工粗糙不好用,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+0c0ef12acf434b0dad350b9b995291d2,merciful-lark-364,,,,,,,,,,,,,,,,,,,,,达标,
+7db1795f5ae74aec88856fd1850131bd,数据漂移测试_画面清晰体验不错,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+d6e7607e094946f2be7c7a7359b94bc5,kindly-trout-254,,,,,,,,,,,,,,,,,,,,,达标,
+eab4c292139b4b32904f9562952b801c,数据漂移测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+3e3e83ae802d4ea2bd09253df5543f4a,youthful-fowl-992,,,,,,,,,,,,,,,,,,,,,达标,
+067dee68e6094e899510f03ef3896a38,公平性测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+5b826cb1932f4c19b716d289018f77bf,nosy-mule-921,,,,,,,,,,,,,,,,,,,,,达标,
+2d940ad96c1a49259a85ba7c2fdea041,公平性测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+6ef661ad1a43486385958d3cd8fb0054,wise-mink-294,,,,,,,,,,,,,,,,,,,,,达标,
+4cd14e8e8ec9469fb416ea093973fb30,公平性测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+4008cdf9be0e4a70b6c25da556b5efad,smiling-mule-190,,,,,,,,,,,,,,,,,,,,,达标,
+f33b8b3e78694056919812017079c1b5,公平性测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+653abe912dd847ad82433f0a447abbc7,capricious-ray-450,,,,,,,,,,,,,,,,,,,,,达标,
+c19d401e823e46b29b7e2d092545bd5c,脏输入测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+2246a670ccae417382a35e7222881e86,dapper-shark-889,,,,,,,,,,,,,,,,,,,,,达标,
+36c380de8f93450485a30bcb67d87d57,脏输入测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+1f74fdfa484047ccb6ef755eafdb9717,caring-shoat-20,,,,,,,,,,,,,,,,,,,,,达标,
+54c43ee2386749f3a14beea545deb310,脏输入测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+4877087b43d0454b940842e8f7e35b84,nervous-newt-749,,,,,,,,,,,,,,,,,,,,,达标,
+0864ae4e73894dbc8487bf6936b96df2,脏输入测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+67af3c78d3c64032a41ea475b96a3df9,learned-bee-881,,,,,,,,,,,,,,,,,,,,,达标,
+a17608810cfd4f4eae89f05705d1f4cd,OOD测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+7365df94fb394fe18101bf0449b69ae0,nimble-bee-806,,,,,,,,,,,,,,,,,,,,,达标,
+b1985390f5ec4f659adb2202b1f7562e,OOD测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+d5639c96339d43c4a8d680520e5f6c87,puzzled-mole-397,,,,,,,,,,,,,,,,,,,,,达标,
+bd092a667adc47d3b11ff1a4be11e86c,OOD测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+f72b4ff279c6403f9df60259cf168f38,wise-donkey-491,,,,,,,,,,,,,,,,,,,,,达标,
+3e491a9fbb4d43e7910cf6fc6e89b059,OOD测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+8c1f8b252e174e86b19b0a74aababaa3,gentle-hare-171,,,,,,,,,,,,,,,,,,,,,达标,
+493d40f876024e7da31a2ea11fe0a1c3,离线vs模拟线上_指标衰减验收,,offline,0.5,0.5,1.0,0.0,,,,,,,,,,,,,,,不达标,离线准确率50.00%<85.00%
+13b16f61a3bf4d789e7e65b082bd39a7,amazing-newt-379,,,,,,,,,,,,,,,,,,,,,达标,
+0d965a424fc6454a9ed503f2435b53a1,对抗注入_这款手机性价比很高,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+d84f8fbd20e74538901e0218a71f9ffa,fearless-dolphin-759,,,,,,,,,,,,,,,,,,,,,达标,
+a68ea27966f54c078c53b6c728693ee0,对抗注入_做工粗糙不好用,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+5dff83d2d1674ec2a3c89acb59eff760,aged-mole-371,,,,,,,,,,,,,,,,,,,,,达标,
+7e832b36978541e8b668bb2911c640fc,对抗注入_画面清晰体验不错,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+fa56dee9ffbf4a4aac7ae4d319c1a19b,melodic-turtle-550,,,,,,,,,,,,,,,,,,,,,达标,
+e4d2a7a0b47c4d509f7f3123c55a8fc4,对抗注入_卡顿频繁不推荐,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+d9c0ee8993cc461d8eaec44aac0e7f90,gregarious-vole-922,,,,,,,,,,,,,,,,,,,,,达标,
+cbd62f09d1fb47fd8216790f1b2d10aa,数据漂移测试_这款手机性价比很高,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+eb3bfdaf8e39415a823cb996327b1bbe,rumbling-doe-136,,,,,,,,,,,,,,,,,,,,,达标,
+bd3aa78140994a2a9165bcdb2a23680c,数据漂移测试_做工粗糙不好用,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+ac83589e14be4118aaea6715a6dfddad,fearless-hare-811,,,,,,,,,,,,,,,,,,,,,达标,
+cf3412d93bd54269992f932ca239f787,数据漂移测试_画面清晰体验不错,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+4212b0f3688d4e5fb21f75dce169663e,righteous-stoat-448,,,,,,,,,,,,,,,,,,,,,达标,
+c2dc94d3727146b2b24f4939508ce19b,数据漂移测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+71d84c3f933b45f995a09a4b8afce94e,honorable-ray-130,,,,,,,,,,,,,,,,,,,,,达标,
+d16a1bb4019245ac997481367d74e9c5,公平性测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+58917178eea6495b9ca12ba351f417bc,classy-colt-739,,,,,,,,,,,,,,,,,,,,,达标,
+c6c54a5f72ba43849b91e060e2516335,公平性测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+a8411bdb088b42a38b50d13eccabd90f,zealous-zebra-999,,,,,,,,,,,,,,,,,,,,,达标,
+638cb0049e914296bd44771a9735e8ca,公平性测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+97e03ad982704ce6b5847668975cc03c,respected-swan-507,,,,,,,,,,,,,,,,,,,,,达标,
+87a3b97666ce410c9c517593ea346c98,公平性测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+8a2f1b33eca6404ba4fc7ee856ad64ee,bald-vole-468,,,,,,,,,,,,,,,,,,,,,达标,
+eff95e1c2b0a40368c97521a8599d305,脏输入测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+5c0f47b8901a4529956da080efba9f0a,omniscient-cat-783,,,,,,,,,,,,,,,,,,,,,达标,
+09b88d98041f44a09371e721b0bf3fa0,脏输入测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+ad882630ef51463fbc5bea521429308a,casual-zebra-91,,,,,,,,,,,,,,,,,,,,,达标,
+4f397c8d247c4594901ecf34e6c89828,脏输入测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+1342617c96b4448bb208066c1d051272,classy-whale-236,,,,,,,,,,,,,,,,,,,,,达标,
+3bd979a0eb9242518788ce9d5d81ecf2,脏输入测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+e21d0cf980dd49299a790845d56f88bb,puzzled-penguin-803,,,,,,,,,,,,,,,,,,,,,达标,
+33206ff624d044718231dfa91c50b577,OOD测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+f04b65e5d80542d5b8ca71ba8d2c3fda,funny-wasp-635,,,,,,,,,,,,,,,,,,,,,达标,
+ffec2ecdaf664efda7573f702f332f07,OOD测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+826255eeab7146d39abecdccec9a3565,silent-duck-345,,,,,,,,,,,,,,,,,,,,,达标,
+19ff10895b4042c9ba88c247eecb7c2c,OOD测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+a8053f7b37a648f5b13f29e531711cd9,thoughtful-kite-550,,,,,,,,,,,,,,,,,,,,,达标,
+4dd49f6eaa10419380e20cbbf617794f,OOD测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+3dfe806a9fdf4a5daf5013f9fb26ae8b,gifted-quail-393,,,,,,,,,,,,,,,,,,,,,达标,
+a6f777fe60f7435b83697118af1dfe12,离线vs模拟线上_指标衰减验收,,offline,0.5,0.5,1.0,0.0,,,,,,,,,,,,,,,不达标,离线准确率50.00%<85.00%
+efb79e83bbb4420dbb56cfafbbb4b041,对抗注入_这款手机性价比很高,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+75f922fe953c449fa90537634e5c3e71,对抗注入_做工粗糙不好用,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+a4f6db90d2794f17b25b9da76f244d96,对抗注入_画面清晰体验不错,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+7a35f156e6bb47e699191c892cdd2be4,对抗注入_卡顿频繁不推荐,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+c3df2b60ca0841f5929e87b2cf7d46ce,数据漂移测试_这款手机性价比很高,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+28ec9a492e4e4d809fe96c1d31b21600,数据漂移测试_做工粗糙不好用,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+4d165f35dc0e4df4a4b0ca227907d2c4,数据漂移测试_画面清晰体验不错,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+1d697fa8cfec4f669503055c26346fb7,数据漂移测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+e9fc5a9118ba407891af69b967bbf2f7,公平性测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+0cf7be96ba5f40a6a3caedc370e52f46,公平性测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+e0ac92e4aa0d4189b054acd6b9439737,公平性测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+14969c3b978d44c08fd31ac0a3feed6a,公平性测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+ca6f3fff1b6b4159805e75f817cc4819,脏输入测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+ff3ff95da19a4f14beb9b8257bf289af,脏输入测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+866c182af90f4325acbface891ae0ce1,脏输入测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+db956c349ac04c64bac44d8d3f751a08,脏输入测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+9ff1ed9fd54c47fdb580ceeb002c73e7,OOD测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+a05203462fa5481e8858405e2001c4eb,OOD测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+f3096ccd3f254200ae7c1cb3f2292195,OOD测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+8b1f2cfb1d944cf8a450e5f1de788279,OOD测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+640fcc53f6954c35921481c095495f9a,离线vs模拟线上_指标衰减验收,,offline,0.5,0.5,1.0,0.0,,,,,,,,,,,,,,,不达标,离线准确率50.00%<85.00%
+2f790c446ee94b458e1c0880d0dfa2ea,离线vs模拟线上_指标衰减验收,,offline,0.5,0.5,1.0,0.0,,,,,,,,,,,,,,,不达标,离线准确率50.00%<85.00%
+d15aab293d934a5cb3013942cba70962,对抗注入_这款手机性价比很高,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+b7983aada10149a4ac970ab02fa9f28f,对抗注入_做工粗糙不好用,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+4e16599581df4ff1ba6412661fa61cae,对抗注入_画面清晰体验不错,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+f8af16d735ef4f89aba67bfa0063db39,对抗注入_卡顿频繁不推荐,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+85a40878ffab4b0ea010bc2ce32095a5,数据漂移测试_这款手机性价比很高,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+52ed2045f6b14add980358776db2cc64,数据漂移测试_做工粗糙不好用,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+3da8201970a44301a4449b15fd4172f4,数据漂移测试_画面清晰体验不错,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+6591279f86a942f2867a8107e85aa2be,数据漂移测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+f588b96f3d964a8896c2eed434aed0a5,公平性测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+4913306c30054221b95fe9bbda1079d7,公平性测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+588804755a9c41278a3f5aa91266fbfc,公平性测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+085bb1bc80ee469c924b94648cc8eb38,公平性测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+0d50ca5763a84e2fa02eefe5cc81d86c,脏输入测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+dd113a99d8034779b9fbd12a53fbdac5,脏输入测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+b60f84b82f7b45c684f1cfda4cc35a83,脏输入测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+a3ae41bfc99743a59210a9f141e6220c,脏输入测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+cc6b1b9642134446b44646d2e826ab55,OOD测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+29eea7123d924d61814bad62c8578e2c,OOD测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+b592c85ca18346b3bd35bec757b5cc89,OOD测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+fef103571b5146afbc043c4f48881d8c,OOD测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+d7a2a5865f8d425a9ccf7b07b54fa65a,离线vs模拟线上_指标衰减验收,,offline,0.5,0.5,1.0,0.0,,,,,,,,,,,,,,,不达标,离线准确率50.00%<85.00%
+a6eb34725f7041368e3c9901700a2751,对抗注入_这款手机性价比很高,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+909c245b8ea64130bf41bbf8cf7c0991,对抗注入_做工粗糙不好用,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+a6c426b1ba654c99b75d92482dc08168,对抗注入_画面清晰体验不错,,robustness,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+0e4ea095ecf7443d8bac509cf69c0977,对抗注入_卡顿频繁不推荐,,robustness,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+175f0fec22d34436a0736a8067affb4a,数据漂移测试_这款手机性价比很高,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+a7f39424cbe14d908a33232290ed4f09,数据漂移测试_做工粗糙不好用,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+1b5b2954cd34428985a3667bb2ffa059,数据漂移测试_画面清晰体验不错,,robustness,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+d95cb9ae750d454c9d6ca385f51d7b86,数据漂移测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+b9c07527675f41e09a48b3460d1a1328,公平性测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+07435418df3d4347b4ed963824148d5e,公平性测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+04ad15c6e24443ca9c30a5d8bec70229,公平性测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+dbce66920a3e4120bafbb7fa08aabffd,公平性测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+2641ac6f4c914e8eb67cedbb01054cbe,脏输入测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+dc74e412271142069f77763aeefd0961,脏输入测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+1475dbe7154b4f878589e4c6e9684479,脏输入测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+4fbfe4b1fa0c482ba8858a37953ef47e,脏输入测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+904b777d8f6545e0893d51d9b3ed40eb,OOD测试_这款手机性价比很高,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+f651ba06051346aa99fd073458f1dbe1,OOD测试_做工粗糙不好用,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+4a507025dd81418a8c8d1ad497b28ec2,OOD测试_画面清晰体验不错,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+4859f484f304403d8026c48feff6909f,OOD测试_卡顿频繁不推荐,,robustness,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+d69f80cb529b4b46a091b26264fe0475,离线vs模拟线上_指标衰减验收,,offline,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+fed6a6ae1d924c76821a46b5b966121c,离线vs模拟线上_指标衰减验收,,offline,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+c2135fe511d0454fbdfa8f401935d2cc,数据集_offline_test_v1.csv_离线指标衰减验收,,offline,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+b29c164717af4a4b9574fe6bf54ab00e,数据集_offline_test_v2.csv_离线指标衰减验收,,offline,,,,,,,,,,,,,,,,,,,达标,
+2c830eb9dad346a984ecd67a8dce83c8,数据集_offline_test_v3.csv_离线指标衰减验收,,offline,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+8ea3d108326b41cb9dd438ad425f072f,数据集_offline_test_v1.csv_离线指标衰减验收,,offline,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+dd7b99c7c750440398a8247f56a83c93,数据集_offline_test_v2.csv_离线指标衰减验收,,offline,,,,,,,,,,,,,,,,,,,达标,
+4441bb458f8f41eda6ad8b32ac0f9831,数据集_offline_test_v3.csv_离线指标衰减验收,,offline,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+92043d319bec4677a6484c67581be6d6,数据集_offline_test_v1.csv_离线指标衰减验收,,offline,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+c0ce013e889945349498543d000885ac,数据集_offline_test_v2.csv_离线指标衰减验收,,offline,,,,,,,,,,,,,,,,,,,达标,
+679c0509b2324cbf8696ab9929a5bd9d,数据集_offline_test_v3.csv_离线指标衰减验收,,offline,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+fb9cbee58a754acbbe007b2354dbe4dd,数据集_offline_test_v1.csv_离线指标衰减验收,,offline,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+2227f83c968d48a4af98c7f287962767,数据集_offline_test_v2.csv_离线指标衰减验收,,offline,,,,,,,,,,,,,,,,,,,达标,
+2a3b3ccd5bec4513b64d52f74594b5b2,数据集_offline_test_v3.csv_离线指标衰减验收,,offline,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+9431c01477964bf8a4947f16630e5419,数据集_offline_test_v1.csv_离线指标衰减验收,,offline,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+60bdac804d37495fb8998ca2fb5ee3a7,数据集_offline_test_v2.csv_离线指标衰减验收,,offline,0.3974,0.6026,0.7843,0.2593,0.2857,0.7143,0.5278,0.4722,,,,,,,,,,,不达标,离线准确率39.74%<85.00%
+551632345cf64e9394321739f8a29b95,数据集_offline_test_v3.csv_离线指标衰减验收,,offline,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+7046f4e220e34679ad036833f5cf4b58,数据集_offline_test_v1.csv_离线指标衰减验收,,,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+e74d15e86dfc4ec99c44f2ee40ef8310,数据集_offline_test_v2.csv_离线指标衰减验收,,,0.3974,0.6026,0.7843,0.2593,0.2857,0.7143,0.5278,0.4722,,,,,,,,,,,不达标,离线准确率39.74%<85.00%
+c50b4698215f49458cb928e3f0fd0d95,数据集_offline_test_v3.csv_离线指标衰减验收,,,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+7ce17b86199e4a20b0ed300810311af7,数据集_offline_test_v1.csv_离线指标衰减验收,,,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+59fdbea52e9d4d4093ccb75198986d76,数据集_offline_test_v2.csv_离线指标衰减验收,,,0.3974,0.6026,0.7843,0.2593,0.2857,0.7143,0.5278,0.4722,,,,,,,,,,,不达标,离线准确率39.74%<85.00%
+c538f5a85ee34e6783e4d1be06d1fa33,数据集_offline_test_v3.csv_离线指标衰减验收,,,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+18c309b447654f63bcafec54e720ddac,数据集_offline_test_v1.csv_离线指标衰减验收,,,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+b3d02c0b3ad84d5dbb94f42b2dc6a62f,数据集_offline_test_v2.csv_离线指标衰减验收,,,0.3974,0.6026,0.7843,0.2593,0.2857,0.7143,0.5278,0.4722,,,,,,,,,,,不达标,离线准确率39.74%<85.00%
+c3854d2522454f63bd4c09b25edb7b9f,数据集_offline_test_v3.csv_离线指标衰减验收,,,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+9b67e3490b7e45d1a7e2405682ee3649,数据集_offline_test_v1.csv_离线指标衰减验收,,,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+3a5b5868a2714d50a9eda6b305ae9905,数据集_offline_test_v2.csv_离线指标衰减验收,,,0.3974,0.6026,0.7843,0.2593,0.2857,0.7143,0.5278,0.4722,,,,,,,,,,,不达标,离线准确率39.74%<85.00%
+ba0ea299579647d08ecbccc3b74efac9,数据集_offline_test_v3.csv_离线指标衰减验收,,,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+8a4f977c99014530906724df4ef814d2,数据集_offline_test_v1.csv_离线指标衰减验收,,,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+0ebda32490714908af79115757e9da67,数据集_offline_test_v2.csv_离线指标衰减验收,,,0.3974,0.6026,0.7843,0.2593,0.2857,0.7143,0.5278,0.4722,,,,,,,,,,,不达标,离线准确率39.74%<85.00%
+91a8776ab2684c2ab2bc907b68fd9355,数据集_offline_test_v3.csv_离线指标衰减验收,,,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+63af81621e79442ba2686eaa4fcd20d7,数据集_offline_test_v1.csv_离线指标衰减验收,,,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+43a4020d59ad47f289268743c976b12a,数据集_offline_test_v2.csv_离线指标衰减验收,,,0.3974,0.6026,0.7843,0.2593,0.2857,0.7143,0.5278,0.4722,,,,,,,,,,,不达标,离线准确率39.74%<85.00%
+4987e3d50ffb42d2bcfb3cdd7acb3e11,数据集_offline_test_v3.csv_离线指标衰减验收,,,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+a9ec7e930c974fb185d5caa89e9d0ff7,数据集_offline_test_v1.csv_离线指标衰减验收,,,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+d5cdf9505e724e5bb7941f99ca4ddde2,数据集_offline_test_v2.csv_离线指标衰减验收,,,0.3974,0.6026,0.7843,0.2593,0.2857,0.7143,0.5278,0.4722,,,,,,,,,,,不达标,离线准确率39.74%<85.00%
+27e0ba41a1c0481fa22b7eae438f151b,数据集_offline_test_v3.csv_离线指标衰减验收,,,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%
+4a2c08842f714566bcecdf6b6fa2b5df,对抗注入_这款手机性价比很高,,,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+3eedfbbd1eca43be8ee14bd3737525f8,对抗注入_做工粗糙不好用,,,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+60698b027c1843ddb8f1cdfcda63b087,对抗注入_画面清晰体验不错,,,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+fc6b4923009b4829ae641a50047fcbdc,对抗注入_卡顿频繁不推荐,,,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+dd3f2666e065437eb14f9b3a543d7454,数据漂移测试_这款手机性价比很高,,,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+559d0393f2e645e99e8736df01b096a7,数据漂移测试_做工粗糙不好用,,,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+75da0ece125f46fd8590af05679c0173,数据漂移测试_画面清晰体验不错,,,,,,,,,,,,,0.5714,0.4286,,,,,,,不达标,鲁棒平均误判率42.86%>8.00%
+9dd27891fc5b4003bd7ff1bbac0f5d1a,数据漂移测试_卡顿频繁不推荐,,,,,,,,,,,,,0.4286,0.5714,,,,,,,不达标,鲁棒平均误判率57.14%>8.00%
+df5f63e90ac74947bd5c1f5e7c2aa385,公平性测试_这款手机性价比很高,,,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+2472f5d25972436bad1abec3403f0af3,公平性测试_做工粗糙不好用,,,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+0ab1aa89002d468d912865d2abd79a1c,公平性测试_画面清晰体验不错,,,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+93cd288f88cd4726b811ecb4b727f3d7,公平性测试_卡顿频繁不推荐,,,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+c40fcda4766846ecbb8c62857b920885,脏输入测试_这款手机性价比很高,,,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+81bd4c3da4b64349bea9ab77ffee1506,脏输入测试_做工粗糙不好用,,,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+39c57ee4a2c842a686b0fe5d2440979a,脏输入测试_画面清晰体验不错,,,,,,,,,,,,,,,,,0.5714,0.4286,,,达标,
+cbb16780353e45dfa50942e88450f6f8,脏输入测试_卡顿频繁不推荐,,,,,,,,,,,,,,,,,0.4286,0.5714,,,达标,
+a41bab16d9c44d7087089bbea55ee845,OOD测试_这款手机性价比很高,,,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+51274387c5374ce899ce54ef5c33e816,OOD测试_做工粗糙不好用,,,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+369387f386d942b889b3cec3a9663095,OOD测试_画面清晰体验不错,,,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+c846ebc68ae04c1ab45c1ee8e5cf9726,OOD测试_卡顿频繁不推荐,,,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+667149c2ffbe4325b0cd96d49a3dede3,对抗注入_这款手机性价比很高,,,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+03c6f650ad7341a19e0c5cf08d964181,对抗注入_做工粗糙不好用,,,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+5cd6a55eb11141bbb467b284f6445a20,对抗注入_画面清晰体验不错,,,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+45f98008fdf44c16bf00e306325c5cf0,对抗注入_卡顿频繁不推荐,,,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+3303ab65e5c3478290641a4c3a6a6f67,对抗注入_这款手机性价比很高,,,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+cc246fd85d1249589288254d6ca7873f,对抗注入_做工粗糙不好用,,,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+c0b4f54e6d0b4d2d8261bcc917b07244,对抗注入_画面清晰体验不错,,,,,,,,,,,1.0,0.0,,,,,,,,,达标,
+845e61d15bd34d5caa2147145bdd3437,对抗注入_卡顿频繁不推荐,,,,,,,,,,,0.0,1.0,,,,,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+5bc9fb825fb646688f04603ddb353359,数据漂移测试_这款手机性价比很高,,,,,,,,,,,,,0.75,0.25,,,,,,,不达标,鲁棒平均误判率25.00%>8.00%
+8a38e5e405fd4acfa7f498e5c3fd625f,数据漂移测试_做工粗糙不好用,,,,,,,,,,,,,0.25,0.75,,,,,,,不达标,鲁棒平均误判率75.00%>8.00%
+9e6978aa977f4703b7148a676d649462,数据漂移测试_画面清晰体验不错,,,,,,,,,,,,,0.75,0.25,,,,,,,不达标,鲁棒平均误判率25.00%>8.00%
+83fd44b3bb64419f852e2137dd584b09,数据漂移测试_卡顿频繁不推荐,,,,,,,,,,,,,0.25,0.75,,,,,,,不达标,鲁棒平均误判率75.00%>8.00%
+7b23c406424f4093addd5b5130451dbf,数据漂移测试_这款手机性价比很高,,,,,,,,,,,,,0.75,0.25,,,,,,,不达标,鲁棒平均误判率25.00%>8.00%
+cefd1d7c9a3341068c816f919564b249,数据漂移测试_做工粗糙不好用,,,,,,,,,,,,,0.25,0.75,,,,,,,不达标,鲁棒平均误判率75.00%>8.00%
+69d5d9152f44402dbe6f921fcc484019,数据漂移测试_画面清晰体验不错,,,,,,,,,,,,,0.75,0.25,,,,,,,不达标,鲁棒平均误判率25.00%>8.00%
+83cb6e72f78049378464b73bd5ce88f4,数据漂移测试_卡顿频繁不推荐,,,,,,,,,,,,,0.25,0.75,,,,,,,不达标,鲁棒平均误判率75.00%>8.00%
+1d11e935285f432c88e9fd7275bc3b24,公平性测试_这款手机性价比很高,,,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+0ab0831740de479994c7c7ec48849806,公平性测试_做工粗糙不好用,,,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+f6f73668e9ca4f31bb9ba9b8dfc23546,公平性测试_画面清晰体验不错,,,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+6e03ebccff334e98a926e716ca7c174a,公平性测试_卡顿频繁不推荐,,,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+b7ca93ed7588412c8f88b687e21e00ee,脏输入测试_这款手机性价比很高,,,,,,,,,,,,,,,,,0.7,0.3,,,达标,
+03cbcd3af17a4cce83f071c40c1f4557,脏输入测试_做工粗糙不好用,,,,,,,,,,,,,,,,,0.3,0.7,,,达标,
+655f8777863b4845960de4466004f733,脏输入测试_画面清晰体验不错,,,,,,,,,,,,,,,,,0.7,0.3,,,达标,
+e67f78017a2b4719906c974b13540ec8,脏输入测试_卡顿频繁不推荐,,,,,,,,,,,,,,,,,0.3,0.7,,,达标,
+324b1eb76e02473ebe027b2e01915f91,OOD测试_这款手机性价比很高,,,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+704ac5105edd452e92af404c48d28da1,OOD测试_做工粗糙不好用,,,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+fa6487a2a78a4db5ba79b3638e74e78f,OOD测试_画面清晰体验不错,,,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+557c7851a85944228e3feab6005f3aa6,OOD测试_卡顿频繁不推荐,,,,,,,,,,,,,,,1.0,7.0,,,,,不达标,鲁棒平均误判率100.00%>8.00%
+d5ce2cf4d20c4f66bb88a1025972f8d3,公平性测试_这款手机性价比很高,,,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+522f44c565eb40199cb47f4dbd4c1ff3,公平性测试_做工粗糙不好用,,,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+78c895a5a15b4b4fa1b695a904fb19ff,公平性测试_画面清晰体验不错,,,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+6337dd08f3e54b93a09ca9081f9e7cb6,公平性测试_卡顿频繁不推荐,,,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+3b1a8c72c6d2423bb4a89d07f156cba9,公平性测试_这款手机性价比很高,,,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+177df684f59546c189eb2a468ab0917c,公平性测试_做工粗糙不好用,,,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+d75caf539528452ab69ff227cf0fd769,公平性测试_画面清晰体验不错,,,,,,,,,,,,,,,,,,,1.0,0.0,达标,
+ae6521c26e414e549573795f2ea94f0f,公平性测试_卡顿频繁不推荐,,,,,,,,,,,,,,,,,,,0.0,1.0,不达标,公平性通过率0.00%<90.00%; 鲁棒平均误判率100.00%>8.00%
+8a6b873c69094d3ca34818223d1e8e6b,数据集_offline_test_v1.csv_离线指标衰减验收,,,0.3913,0.6087,0.814,0.2692,0.2917,0.7083,0.4444,0.5556,,,,,,,,,,,不达标,离线准确率39.13%<85.00%
+c6c2bf6fe2644a5cbc439311e6bccd88,数据集_offline_test_v2.csv_离线指标衰减验收,,,0.3974,0.6026,0.7843,0.2593,0.2857,0.7143,0.5278,0.4722,,,,,,,,,,,不达标,离线准确率39.74%<85.00%
+c79bc723833c4ba892f8648d757eeebc,数据集_offline_test_v3.csv_离线指标衰减验收,,,0.4533,0.5467,0.625,0.4074,0.3125,0.6875,0.5581,0.4419,,,,,,,,,,,不达标,离线准确率45.33%<85.00%

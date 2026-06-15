@@ -2,16 +2,15 @@ import os
 import csv
 import mlflow
 from datetime import datetime, timedelta
-import allure
 import sys
 import pandas as pd
 
-# ========== 配置区 (只改这里) ==========
-MLFLOW_TRACKING_URI = "file:///home/ubuntu/Desktop/auto-ci-demo/mlruns"
+# =================配置区 (只改这里)================
+MLFLOW_TRACKING_URI = "file:///home/ubuntu/Desktop/auto-ci-demo/mlruns/"
 EXPERIMENT_NAMES = ["model-test-suite-offline", "model-test-suite-robustness"]
 OUTPUT_CSV_PATH = "/home/ubuntu/Desktop/auto-ci-demo/metrics_summary.csv"
 
-# ========== 工具函数 ==========
+# =================工具函数================
 def safe_round(v, d=4):
     try:
         return round(float(v), d)
@@ -22,23 +21,22 @@ def utc_to_beijing(utc_time):
     """稳妥转北京时间"""
     try:
         if hasattr(utc_time, "tzinfo") and utc_time.tzinfo is None:
-            utc_time = utc_time.replace(tzinfo=None)
-        local_time = utc_time + timedelta(hours=8)
-        return local_time.strftime("%Y-%m-%d %H:%M:%S")
+            local_time = utc_time + timedelta(hours=8)
+            return local_time.strftime("%Y-%m-%d %H:%M:%S")
     except Exception:
         return str(utc_time)
 
-# ========== 主逻辑 ==========
+# =================主逻辑================
 def main():
-    # 1. 清理旧文件
+    # 1.清理旧文件
     if os.path.exists(OUTPUT_CSV_PATH):
         os.remove(OUTPUT_CSV_PATH)
 
-    # 2. 连接MLflow
+    # 2.连接MLflow
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
     client = mlflow.tracking.MlflowClient()
 
-    # 3. 批量获取所有指定experiment的run
+    # 3.批量获取所有指定experiment的run
     all_runs = []
     for exp_name in EXPERIMENT_NAMES:
         exp = mlflow.get_experiment_by_name(exp_name)
@@ -58,13 +56,11 @@ def main():
 
     # 合并所有experiment的数据
     runs = pd.concat(all_runs, ignore_index=True)
-    
-    # =========新增排序代码 开始=========
-    # 按run启动时间升序：最早执行的批次在上，最新批次在末尾
-    runs = runs.sort_values(by="start_time", ascending=True, ignore_index=True)
-    # =========新增排序代码 结束=========
 
-    # 4. 指标映射 (新增指标只改这里)
+    # 按run启动时间升序: 最早执行的批次在上，最新批次在末尾
+    runs = runs.sort_values(by="start_time", ascending=True, ignore_index=True)
+
+    # 4.指标映射 (新增指标只改这里)
     metric_map = {
         # 原有全局指标不动
         "offline_accuracy": "metrics.offline_accuracy",
@@ -92,7 +88,7 @@ def main():
         "fairness_error_rate": "metrics.fairness_error_rate"
     }
 
-    # 5. 构建行数据 (修复tags取值异常问题)
+    # 5.构建行数据 (修复tags取值异常问题)
     rows = []
     for _, run in runs.iterrows():
         try:
@@ -110,7 +106,7 @@ def main():
             print(f"❌ 处理run {run['run_id']} 失败: {e}")
             continue
 
-    # 6. 写入CSV
+    # 6.写入原始CSV（原生csv模块）
     if rows:
         fieldnames = list(rows[0].keys())
         with open(OUTPUT_CSV_PATH, "w", newline="", encoding="utf-8") as f:
@@ -118,44 +114,62 @@ def main():
             writer.writeheader()
             writer.writerows(rows)
         print(f"✅ 汇总表已生成: {OUTPUT_CSV_PATH}")
-        print(f"✅ 总共读取了 {len(rows)} 条记录!")
 
-    # ================== 新增: 指标阈值门禁校验 (仅告警,不阻断流水线) ==================
-    # 1. 读取刚生成的完整CSV
+    # ==================== 新增：指标阈值门禁校验（仅告警，不阻断流水线） ====================
+    # 1.读取刚生成的完整CSV
     df = pd.read_csv(OUTPUT_CSV_PATH)
     pass_flag = True
 
-    # 2. 自定义指标阈值 (修正key拼写错误)
+    # 2.自定义指标阈值（和你的业务对齐）
     threshold_cfg = {
         "offline_accuracy": 0.85,
         "online_accuracy": 0.83,
-        "fairness_pass_rate": 0.9,
+        "fairness_pass_rate": 0.90,
         "robust_total_max_error": 0.08
     }
 
-    # 校验离线指标 (offline分组)
-    df_offline = df[df["test_type"] == "offline"]
-    if len(df_offline) > 0:
-        offline_acc = df_offline.iloc[0]["offline_accuracy"]
-        if offline_acc < threshold_cfg["offline_accuracy"]:
-            print(f"❌ 离线准确率 {offline_acc:.2%} < 阈值 {threshold_cfg['offline_accuracy']:.2%}, 指标劣化")
-            pass_flag = False
+    # 单行判定函数：逐条校验、生成达标标记+原因
+    def judge_row(row, cfg):
+        reasons = []
+        # 下限类：不能低于阈值
+        if row["offline_accuracy"] < cfg["offline_accuracy"]:
+            reasons.append(f"离线准确率{row['offline_accuracy']:.2%}<{cfg['offline_accuracy']:.2%}")
+        if "online_accuracy" in df.columns and row["online_accuracy"] < cfg["online_accuracy"]:
+            reasons.append(f"线上准确率{row['online_accuracy']:.2%}<{cfg['online_accuracy']:.2%}")
+        if row["fairness_pass_rate"] < cfg["fairness_pass_rate"]:
+            reasons.append(f"公平性通过率{row['fairness_pass_rate']:.2%}<{cfg['fairness_pass_rate']:.2%}")
 
-    # 校验鲁棒性整体错误率均值
-    df_robust = df[df["test_type"] == "robustness"]
-    if len(df_robust) > 0:
-        err_cols = ["adv_error_rate", "drift_error_rate", "ood_error_rate", "fairness_error_rate"]
-        mean_err = df_robust[err_cols].mean(axis=1).mean()
-        if mean_err > threshold_cfg["robust_total_max_error"]:
-            print(f"❌ 鲁棒平均错误率 {mean_err:.4f} > 阈值 {threshold_cfg['robust_total_max_error']}")
-            pass_flag = False
+        # 鲁棒多指标均值校验
+        robust_cols = ["adv_error_rate", "drift_error_rate", "ood_error_rate", "fairness_error_rate"]
+        exist_cols = [c for c in robust_cols if c in df.columns]
+        if len(exist_cols) > 0:
+            mean_err = df.loc[row.name, exist_cols].mean()
+            if mean_err > cfg["robust_total_max_error"]:
+                reasons.append(f"鲁棒平均误判率{mean_err:.2%}>{cfg['robust_total_max_error']:.2%}")
 
-    # 3. 校验不达标仅打印提示, 不再exit阻断流水线 (方案B已生效)
-    if not pass_flag:
-        print("⚠️ 指标校验未通过，仅做提示，不阻断流水线")
+        if len(reasons) == 0:
+            return "达标", ""
+        else:
+            return "不达标", "; ".join(reasons)
+
+    # 逐行遍历，新增两列
+    df[["是否达标", "超限详情"]] = df.apply(lambda x: pd.Series(judge_row(x, threshold_cfg)), axis=1)
+
+    # ---------------- 关键：回写CSV，新列持久化保存 ----------------
+    df.to_csv(OUTPUT_CSV_PATH, index=False, encoding="utf-8-sig")
+    print(f"✅ 已追加达标校验标记，更新CSV文件")
+
+    # 筛选不合格批次，控制台柔性告警（不exit、不阻断流水线）
+    fail_df = df[df["是否达标"] == "不达标"]
+    if len(fail_df) > 0:
+        pass_flag = False
+        print(f"\n⚠️ 柔性门禁告警：共 {len(fail_df)} 轮迭代指标不达标，已写入CSV标记，流水线继续执行！")
+        print(fail_df[["run_id", "test_type", "是否达标", "超限详情"]].to_string())
     else:
-        print("✅ 全部指标校验达标")
+        print("\n✅ 全部迭代指标校验达标")
 
+    # 不做sys.exit(1)，永远放行流水线
+    # ======================================================================================
 
 if __name__ == "__main__":
     main()

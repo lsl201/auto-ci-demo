@@ -1,0 +1,1 @@
+TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]

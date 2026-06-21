@@ -85,7 +85,12 @@ def main():
         "noise_robust_accuracy": "metrics.robust_noise_accuracy",
         "noise_robust_error_rate": "metrics.robust_noise_error_rate",
         "fairness_pass_rate": "metrics.fairness_pass_rate",
-        "fairness_error_rate": "metrics.fairness_error_rate"
+        "fairness_error_rate": "metrics.fairness_error_rate",
+        
+        # === 新增衰减指标映射 ===
+        "decay_accuracy": "metrics.decay_accuracy",
+        "decay_FPR": "metrics.decay_FPR",
+        "decay_FNR": "metrics.decay_FNR",
     }
 
     # 5.构建行数据 (修复tags取值异常问题)
@@ -122,13 +127,17 @@ def main():
 
     # 2.自定义指标阈值（和你的业务对齐）
     threshold_cfg = {
-        "offline_accuracy": 0.85,
-        "online_accuracy": 0.83,
-        "fairness_pass_rate": 0.90,
-        "robust_total_max_error": 0.08
+        "offline_accuracy": 0.85,     # 线下准确率阈值：模型在本地测试集上的准确率，不低于0.85才算合格
+        "online_accuracy": 0.83,    # 线上模型准确率的最低合格阈值
+        "fairness_pass_rate": 0.90,    # 公平性通过率阈值：不同群体的模型表现通过率，不低于0.9才算合格
+        "robust_total_max_error": 0.08,    # 鲁棒性最大误差阈值：对抗攻击/噪声测试下的最大误差，不超过0.08才算合格
+        # 追加衰减指标阈值
+        "decay_accuracy": -0.1,    # 准确率下降不能超过 10%（即线上准确率下降不超过10%）
+        "decay_FPR": 0.1,     # 误报率（FPR）衰减阈值：线上误报率 - 线下误报率，不能超过0.1（即误报率上升不超过10%）
+        "decay_FNR": 0.1      # 漏检率（FNR）衰减阈值：线上漏检率 - 线下漏检率，不能超过0.1（即漏检率上升不超过10%）
     }
 
-    # 单行判定函数：逐条校验、生成达标标记+原因
+    # 单行判定函数：逐条校验、生成达标标记+原因s
     def judge_row(row, cfg):
         reasons = []
         # 下限类：不能低于阈值
@@ -139,6 +148,17 @@ def main():
         if row["fairness_pass_rate"] < cfg["fairness_pass_rate"]:
             reasons.append(f"公平性通过率{row['fairness_pass_rate']:.2%}<{cfg['fairness_pass_rate']:.2%}")
 
+        # === 新增衰减指标判断逻辑 ===
+        # decay_accuracy：不能低于阈值（如-0.1）
+        if "decay_accuracy" in cfg and row["decay_accuracy"] < cfg["decay_accuracy"]:
+            reasons.append(f"准确率衰减{row['decay_accuracy']:.2%} < {cfg['decay_accuracy']:.2%}")
+
+        # decay_FPR/decay_FNR：不能高于阈值（如0.1）
+        if "decay_FPR" in cfg and row["decay_FPR"] > cfg["decay_FPR"]:
+            reasons.append(f"误报率衰减{row['decay_FPR']:.2%} > {cfg['decay_FPR']:.2%}")
+        if "decay_FNR" in cfg and row["decay_FNR"] > cfg["decay_FNR"]:
+            reasons.append(f"漏检率衰减{row['decay_FNR']:.2%} > {cfg['decay_FNR']:.2%}")
+        
         # 鲁棒多指标均值校验
         robust_cols = ["adv_error_rate", "drift_error_rate", "ood_error_rate", "fairness_error_rate"]
         exist_cols = [c for c in robust_cols if c in df.columns]
